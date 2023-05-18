@@ -2,7 +2,7 @@
 date: '2019-01-01'
 title: 'Software Developer'
 company: 'Aruba Networks'
-range: 'Jan 2019 - Present'
+range: 'Jan 2019 - July 2022'
 url: 'https://www.arubanetworks.com/'
 ---
 
