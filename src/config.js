@@ -6,7 +6,7 @@ module.exports = {
     'Shikhar Gupta, Shikhar, Gupta, Shikhar97, software developer, software engineer, cloud engineer, ml engineer, web developer, python developer, ghaziabad, aruba networks, pes university, bangalore',
   siteUrl: 'https://Shikhar97.github.io/',
   siteLanguage: 'en_US',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'G-JJBG91P2EL',
   googleVerification: '',
   name: 'Shikhar Gupta',
   location: 'Tempe, Arizona',
