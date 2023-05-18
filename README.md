@@ -1,5 +1,5 @@
 <div style="text-align:center">
-  <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/code/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/logo.png" width="100" />
 </div>
 <h1 style="text-align:center">
   Portfolio Website
@@ -11,25 +11,27 @@
 
 <div style="text-align:center">
 
-  <img alt="Demo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/code/src/images/demo.png" />
+  <img alt="Demo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/demo.png" />
 
 </div>
 
 
-Yes, you can fork this repo. Please give proper credit by linking back to [brittanychiang.com](https://brittanychiang.com). Thanks!
+You can fork this repo. Thanks to [brittanychiang.com](https://brittanychiang.com). Awesome work!
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+1. Instal node(v18 or higher)
+
+   ```sh
+   brew install node
+   
+   ```
+
+2. Install the Gatsby CLI and yarn
 
    ```sh
    npm install -g gatsby-cli
-   ```
-
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
-
-   ```sh
-   nvm install
+   npm install -g yarn
    ```
 
 3. Install dependencies
