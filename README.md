@@ -1,5 +1,5 @@
 <div style="text-align:center">
-  <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/logo.ico" width="100" />
 </div>
 <h1 style="text-align:center">
   Portfolio Website
