@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML Engineer',
   siteDescription:
-    'Chandrika Deb is a Computer Science Graduate Student at Arizona State University, who loves learning new things.',
+    'Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things.',
   siteKeywords:
     'Shikhar Gupta, Shikhar, Gupta, Shikhar97, software developer, software engineer, cloud engineer, ml engineer, web developer, python developer, ghaziabad, aruba networks, pes university, bangalore',
   siteUrl: 'https://Shikhar97.github.io/',
@@ -12,27 +12,23 @@ module.exports = {
   location: 'Tempe, Arizona',
   email: 'sgupt330@asu.edu',
   github: 'https://github.com/Shikhar97',
-  twitterHandle: '@chandrikadeb7',
+  twitterHandle: '@IamShikharGupta',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/chandrikadeb7',
+      url: 'https://github.com/Shikhar97',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/chandrika-deb/',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/chandrikadeb7',
+      url: 'https://www.linkedin.com/in/shikhar-gupta-430372134/',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/chandrikadeb7',
+      url: 'https://www.instagram.com/shikharguptaaa/',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/chandrikadeb7',
+      url: 'https://twitter.com/IamShikharGupta',
     },
   ],
 
