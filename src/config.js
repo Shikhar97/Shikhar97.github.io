@@ -7,7 +7,7 @@ module.exports = {
   siteUrl: 'https://Shikhar97.github.io/',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'G-JJBG91P2EL',
-  googleVerification: '',
+  googleVerification: 'q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE',
   name: 'Shikhar Gupta',
   location: 'Tempe, Arizona',
   email: 'sgupt330@asu.edu',
