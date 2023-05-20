@@ -67,9 +67,6 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      return;
-    }
     fetch('https://api.github.com/repos/bchiang7/v4')
       .then(response => response.json())
       .then(json => {
@@ -106,7 +103,7 @@ const Footer = () => {
             target="_blank"
             rel="nofollow noopener noreferrer">
           <div>
-            Designed &amp; Built by Brittany Chiang<br></br>
+            Designed &amp; Built by Brittany Chiang<br></br><br></br>
             Revised by Shikhar Gupta
           </div>
 

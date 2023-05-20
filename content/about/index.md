@@ -12,9 +12,9 @@ skills:
   - HTML, CSS, Bootstrap, JavaScript, D3.js, React.js
 ---
 
-Interestingly, I got introduced to programming in my freshman year at [PES University, Bangalore](https://pes.edu/) where I completed my Bachelors in Computer Science (2015-2019) with [9.21 CGPA](https://drive.google.com/file/d/1G4UBPBP0mvWZLRdkF_EcpmKKGp7_OA8U/view?usp=sharing).
+Interestingly, I got introduced to programming in my freshman year at [PES University, Bangalore](https://pes.edu/) where I completed my Bachelors in Computer Science (2015-2019) with a GPA of [3.74](https://drive.google.com/file/d/1YteAN9IXtsFB5cWnINOAb4W5Gg2BA5ep/view?usp=sharing).
 
-I'm graduate student pursuing Masters in Computer Science at Arizona State University.
+I'm graduate student pursuing Masters in Computer Science at [Arizona State University](https://www.asu.edu/).
 
 I have worked as a Software Engineer at Aruba Networks for 3 years as a full-stack developer.
 

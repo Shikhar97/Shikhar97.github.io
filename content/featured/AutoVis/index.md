@@ -1,6 +1,6 @@
 ---
 date: '2'
-title: 'Automated Visualization Generation using GPT-3 and Vega-Lite'
+title: 'Generating Visualization using GPT-3 and Vega-Lite'
 cover: 'cover.png'
 github: ''
 external: 'https://www.youtube.com/watch?v=rs1GStvE9x0'
