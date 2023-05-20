@@ -100,6 +100,30 @@ const Footer = () => {
             ))}
         </StyledSocialList>
       </StyledSocial>
+      <StyledMetadata tabindex="-1">
+        <StyledGitHubLink
+            href="https://github.com/bchiang7/v4"
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+          <div>
+            Designed &amp; Built by Brittany Chiang<br></br>
+            Revised by Shikhar Gupta
+          </div>
+
+          {githubInfo.stars && githubInfo.forks && (
+              <StyledGitHubInfo>
+              <span>
+                <FormattedIcon name="Star" />
+                <span>{githubInfo.stars.toLocaleString()}</span>
+              </span>
+                <span>
+                <FormattedIcon name="Fork" />
+                <span>{githubInfo.forks.toLocaleString()}</span>
+              </span>
+              </StyledGitHubInfo>
+          )}
+        </StyledGitHubLink>
+      </StyledMetadata>
     </StyledContainer>
   );
 };

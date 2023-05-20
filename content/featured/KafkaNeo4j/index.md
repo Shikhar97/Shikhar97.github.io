@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Scaling Graph Processing with Kubernetes, Kafka, and Neo4j'
-cover: 'cover.png'
+cover: 'cover.jpeg'
 github: 'https://github.com/Shikhar97/Kafka-Neo4j'
 external: ''
 tech:
