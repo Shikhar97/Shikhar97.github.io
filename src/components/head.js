@@ -26,10 +26,17 @@ const Head = ({metadata}) => (
         </title>
         <link rel="shortcut icon" href={favicon}/>
         <link rel="canonical" href="https://shikhar97.github.io"/>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"></script>
-        {/*<script src="gtag.js"></script>*/}
         <meta name="description" content={metadata.description}/>
         <meta name="keywords" content={config.siteKeywords}/>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"></script>
+        <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-JJBG91P2EL');
+              `}
+        </script>
         <meta name="google-site-verification" content={config.googleVerification}/>
         <meta property="og:title" content={metadata.title}/>
         <meta property="og:description" content={metadata.description}/>

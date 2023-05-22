@@ -9,7 +9,7 @@ tech:
   - CSS
   - Bootstrap
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 The project goes beyond common chart types and presents the data in a creative manner, making it interesting and informative for a general audience.

@@ -9,7 +9,7 @@ tech:
   - CSS
   - Bootstrap
 company: ''
-showInProjects: false
+showInProjects: true
 ---
 
 A pair of data visualizations that argue for opposing viewpoints, using the same dataset.

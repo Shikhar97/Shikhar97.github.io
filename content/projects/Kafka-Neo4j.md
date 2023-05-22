@@ -10,7 +10,7 @@ tech:
   - Kafka
   - Python
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 Implementing graph processing algorithms in a distributed environment using Docker, Neo4j, Kafka, and Kubernetes.

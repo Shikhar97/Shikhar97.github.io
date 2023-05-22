@@ -10,7 +10,7 @@ tech:
   - CSS
   - Javascript
   - Bootstrap
-showInProjects: false
+showInProjects: true
 ---
 
 Basic functionality of instagram implemented using flask.
