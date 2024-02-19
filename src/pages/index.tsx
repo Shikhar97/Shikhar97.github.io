@@ -46,7 +46,6 @@ export default function Home({
                 <Projects />
                 <Technical />
                 <Education />
-                <Designs />
                 <Contact />
                 <Footer />
             </Grid>
