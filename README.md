@@ -1,74 +1,38 @@
-<div style="text-align:center">
-  <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/logo.ico" width="100" />
-</div>
-<h1 style="text-align:center">
-  Portfolio Website
-</h1>
-<p style="text-align:center">
-  Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://pages.github.com/" target="_blank">Github Pages</a>
-</p>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Getting Started
 
-<div style="text-align:center">
+First, run the development server:
 
-  <img alt="Demo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/main/src/images/demo.png" />
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-</div>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-You can fork this repo. Thanks to [brittanychiang.com](https://brittanychiang.com). Awesome work!
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## 🛠 Installation & Set Up
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-1. Instal node(v18 or higher)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-   ```sh
-   brew install node
-   
-   ```
+## Learn More
 
-2. Install the Gatsby CLI and yarn
+To learn more about Next.js, take a look at the following resources:
 
-   ```sh
-   npm install -g gatsby-cli
-   npm install -g yarn
-   ```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-3. Install dependencies
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-   ```sh
-   yarn
-   ```
+## Deploy on Vercel
 
-4. Start the development server
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-   ```sh
-   npm start
-   ```
-
-## 🚀 Building and Running for Production
-
-1. Generate a full static production build
-
-   ```sh
-   npm run build
-   ```
-
-1. Preview the site as it will appear once deployed
-
-   ```sh
-   npm run serve
-   ```
-
-## 🎨 Color Reference
-
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
-| Light Navy     | ![#172a45](https://via.placeholder.com/10/0a192f?text=+) `#172a45` |
-| Lightest Navy  | ![#303C55](https://via.placeholder.com/10/303C55?text=+) `#303C55` |
-| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
-| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
-| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
