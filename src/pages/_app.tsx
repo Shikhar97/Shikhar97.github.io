@@ -71,7 +71,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <meta
                     name="title"
                     property="og:title"
-                    content="Pawan Bhandarkar"
+                    content="Shikhar Gupta"
                 />
                 <meta
                     name="description"

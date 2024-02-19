@@ -8,11 +8,10 @@ import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
 
 const enum ESocials {
-    GITHUB_URL = "http://github.com/BhandarkarPawan",
-    INSTAGRAM_URL = "https://www.instagram.com/radioactive.poop/",
-    TWITTER_URL = "https://twitter.com/BhandarkarPawan",
-    LINKEDIN_URL = "https://www.linkedin.com/in/bhandarkar",
-    CODEPEN_URL = "https://codepen.io/bhandarkarpawan",
+    GITHUB_URL = "https://github.com/Shikhar97",
+    INSTAGRAM_URL = "https://www.instagram.com/shikharguptaaa/",
+    TWITTER_URL = "",
+    LINKEDIN_URL = "https://www.linkedin.com/in/shikharg97/",
 }
 
 export const SocialIcons: React.FC = () => {
@@ -29,9 +28,6 @@ export const SocialIcons: React.FC = () => {
             </HoverIconLink>
             <HoverIconLink href={ESocials.LINKEDIN_URL} target="_blank">
                 <FaLinkedinIn />
-            </HoverIconLink>
-            <HoverIconLink href={ESocials.CODEPEN_URL} target="_blank">
-                <AiOutlineCodepen />
             </HoverIconLink>
         </>
     );

@@ -42,14 +42,14 @@ const Contact: React.FC<React.PropsWithChildren<IProps>> = ({
                     <Message>
                         If you would like to work together or discuss an
                         opportunity for work, please use the form or send me an
-                        email on <Highlight>pawan@bhandarkar.me</Highlight>
+                        email on <Highlight>sgupt330@asu.edu</Highlight>
                     </Message>
                 </SlideUp>
                 <SlideUp>
                     <StyledButton
                         onClick={() => {
                             window.open(
-                                `mailto:pawan@bhandarkar.me?subject=Job Opportunity&body=${message}`
+                                `mailto:sgupt330@asu.edu?subject=Job Opportunity&body=${message}`
                             );
                         }}
                     >

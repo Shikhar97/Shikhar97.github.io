@@ -62,10 +62,10 @@ const Header = ({
                     <Hamburger toggled={showSidebar} onToggle={toggleSidebar} />
                 </MenuButton>
             </Wrapper>
-            <Banner>
-                I&apos;m currently building something awesome at{" "}
-                <A href="https://www.convergelab.ai/">Convergelab.ai</A>
-            </Banner>
+            {/*<Banner>*/}
+            {/*    I&apos;m currently building something awesome at{" "}*/}
+            {/*    <A href="https://www.convergelab.ai/">Convergelab.ai</A>*/}
+            {/*</Banner>*/}
         </>
     );
 };

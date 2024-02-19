@@ -7,7 +7,7 @@ export interface IProps {
 const Footer = ({ ...delegated }) => {
     return (
         <Wrapper>
-            Designed and Developed by <strong> Pawan Bhandarkar</strong>
+            Designed and Developed by <strong> Shikhar Gupta</strong>
         </Wrapper>
     );
 };

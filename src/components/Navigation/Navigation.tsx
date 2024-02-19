@@ -6,23 +6,23 @@ const Navigation = () => {
     return (
         <>
             <NavLink href="#about">
-                <LinkText>about</LinkText>
-                about
+                <LinkText>About</LinkText>
+                About
             </NavLink>
             <NavLink href="#projects">
-                <LinkText>projects</LinkText>
-                projects
+                <LinkText>Projects</LinkText>
+                Projects
             </NavLink>
             <NavLink href="#designs">
-                <LinkText>designs</LinkText>
-                designs
+                <LinkText>Designs</LinkText>
+                Designs
             </NavLink>
             <NavLink href="#contact">
-                <LinkText>contact</LinkText>
-                contact
+                <LinkText>Contact</LinkText>
+                Contact
             </NavLink>
-            <DownloadLink href="files/resume.pdf" download>
-                resume
+            <DownloadLink href="files/resume.pdf" target="_blank">
+                Resume
                 <FaDownload />
             </DownloadLink>
         </>

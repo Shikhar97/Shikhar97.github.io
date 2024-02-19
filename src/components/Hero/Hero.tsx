@@ -15,19 +15,18 @@ const Hero = () => {
             <Text>
                 <Highlight>Hi, my name is</Highlight>
             </Text>
-            <Name>Pawan Bhandarkar.</Name>
-            <SubText>I build for everyone</SubText>
+            <Name>Shikhar Gupta.</Name>
+            <SubText>I love challenging myself every day!</SubText>
             <Text>
-                I’m a full-stack engineer specialising in building (and
-                sometimes designing) highly accessible, human-centered
-                applications for the web. Currently, I’m pursuing a Master’s
+                I bring over 3 years of experience specializing in full-stack development, CI/CD, cloud infrastructure, and automation.
+                Currently, I’m pursuing a Master’s
                 degree in Computer Science at{" "}
                 <Link
-                    href="https://www.cmu.edu"
+                    href="https://www.asu.edu/"
                     target="_blank"
                     rel="noreferrer noopener"
                 >
-                    <Highlight>Carnegie Mellon University</Highlight>
+                    <Highlight>Arizona State University</Highlight>
                 </Link>
             </Text>
             <CallToAction onClick={scrollToContact}>Get In Touch</CallToAction>
@@ -68,6 +67,7 @@ const SubText = styled.h3`
     color: ${({ theme }) => theme.colors.text.light};
     font-size: calc(35 / 16 * 1rem);
     margin-bottom: 24px;
+    width: max-content;
 
     ${QUERIES.tabletAndUp} {
         font-size: calc(64 / 16 * 1rem);
