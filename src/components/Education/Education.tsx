@@ -33,7 +33,7 @@ const COLLEGES = [
         ],
         start: 2015,
         end: 2019,
-        gpa: "4.7",
+        gpa: "3.7",
         imgSrc: "images/pesu.jpeg",
     },
 ];

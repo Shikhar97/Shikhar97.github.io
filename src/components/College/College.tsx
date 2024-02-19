@@ -25,7 +25,7 @@ const College: React.FC<IProps> = ({
     side,
     ...delegated
 }) => {
-    const smallImg = imgSrc.replace(".png", "-small.png");
+    const smallImg = imgSrc.replace(".jpeg", "-small.jpeg");
 
     return (
         <Wrapper side={side} {...delegated}>

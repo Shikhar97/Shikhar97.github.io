@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Designs from "@/components/Designs";
 import Dots from "@/components/Dots";
 import Education from "@/components/Education";
 import Email from "@/components/Email";
@@ -43,7 +42,7 @@ export default function Home({
 
                 <About theme={theme} />
                 <Experiences />
-                <Projects />
+                {/*<Projects />*/}
                 <Technical />
                 <Education />
                 <Contact />

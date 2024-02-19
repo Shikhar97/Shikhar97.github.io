@@ -76,27 +76,27 @@ export default function App({ Component, pageProps }: AppProps) {
                 <meta
                     name="description"
                     property="og:description"
-                    content="I'm a full-stack engineer specializing in building (and sometimes designing) highly accessible, human-centered applications for the web."
+                    content="I bring over 3 years of experience specializing in full-stack development, CI/CD, cloud infrastructure, and automation."
                 />
                 <meta
                     name="image"
                     property="og:image"
                     content="/images/hero.png"
                 />
-                <link rel="canonical" href="https://bhandarkar.me" />
-                <meta property="og:url" content="https://bhandarkar.me" />
+                <link rel="canonical" href="https://shikhar97.github.io/" />
+                <meta property="og:url" content="https://shikhar97.github.io/" />
                 <meta property="og:type" content="website" />
-
+                <meta name="google-site-verification" content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE" />
                 <script
                     async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-CWWXED2451"
+                    src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"
                 />
                 <script id="google-analytics">
                     {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-CWWXED2451');
+                gtag('config', 'G-JJBG91P2EL');
                 `}
                 </script>
             </Head>

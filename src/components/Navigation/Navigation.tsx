@@ -13,10 +13,6 @@ const Navigation = () => {
                 <LinkText>Projects</LinkText>
                 Projects
             </NavLink>
-            <NavLink href="#designs">
-                <LinkText>Designs</LinkText>
-                Designs
-            </NavLink>
             <NavLink href="#contact">
                 <LinkText>Contact</LinkText>
                 Contact

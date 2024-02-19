@@ -1,7 +1,7 @@
 export const getServerSideProps = async () => {
     return {
         redirect: {
-            destination: "https://github.com/BhandarkarPawan",
+            destination: "https://github.com/Shikhar97",
             permanent: false,
         },
     };

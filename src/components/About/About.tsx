@@ -20,11 +20,11 @@ const About: React.FC<React.PropsWithChildren<IProps>> = ({
     };
 
     const aboutUrl =
-        theme === "light" ? "images/pawan-2-light.png" : "images/shikhar-3.jpeg";
-    const aboutUrlSmall =
-        theme === "light"
-            ? "images/pawan-small-light.png"
-            : "images/pawan-small.png";
+        theme === "light" ? "images/shikhar-3.jpeg" : "images/shikhar-3.jpeg";
+    // const aboutUrlSmall =
+    //     theme === "light"
+    //         ? "images/pawan-small-light.png"
+    //         : "images/pawan-small.png";
 
     return (
         <Wrapper {...delegated} id="about">
