@@ -2,7 +2,7 @@
 #
 # To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
 #
-name: publish-site
+name: portfolio-v1
 
 on:
   # Runs on pushes targeting the default branch
