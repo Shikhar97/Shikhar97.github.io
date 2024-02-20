@@ -62,7 +62,7 @@ const About: React.FC<React.PropsWithChildren<IProps>> = ({
                 <Source media={MIN_WIDTH.desktop} srcSet={aboutUrl}/>
                 <Source
                     media={MIN_WIDTH.tablet}
-                    srcSet="images/pawan-small.png"
+                    srcSet="images/shikhar-3.jpeg"
                 />
                 <Image src={aboutUrl} alt="Shikhar Gupta"/>
             </Picture>

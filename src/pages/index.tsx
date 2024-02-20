@@ -41,7 +41,7 @@ export default function Home({
                 </DotWrapper>
 
                 <About theme={theme} />
-                {/*<Experiences />*/}
+                <Experiences />
                 {/*<Projects />*/}
                 {/*<Technical />*/}
                 <Education />
