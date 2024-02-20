@@ -16,7 +16,7 @@ const About: React.FC<React.PropsWithChildren<IProps>> = ({
                                                               ...delegated
                                                           }) => {
     const downloadResume = () => {
-        window.open("/files/resume.pdf", "_blank");
+        window.open("resume.pdf", "_blank");
     };
 
     const aboutUrl =
