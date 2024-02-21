@@ -71,22 +71,26 @@ export default function App({ Component, pageProps }: AppProps) {
                 <meta
                     name="title"
                     property="og:title"
-                    content="Shikhar Gupta"
+                    content="Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML Engineer"
                 />
                 <meta
                     name="description"
                     property="og:description"
-                    content="I bring over 3 years of experience specializing in full-stack development, CI/CD, cloud infrastructure, and automation."
+                    content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."
                 />
                 <meta
                     name="image"
                     property="og:image"
-                    content="/images/hero.png"
+                    content="/images/opengraph-image.jpg"
                 />
-                <link rel="canonical" href="https://shikhar97.github.io/" />
+                <meta property="og:image:type" content="<generated>" />
+                <meta property="og:image:width" content="<generated>" />
+                <meta property="og:image:height" content="<generated>" />
+
                 <meta property="og:url" content="https://shikhar97.github.io/" />
                 <meta property="og:type" content="website" />
                 <meta name="google-site-verification" content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE" />
+                <link rel="canonical" href="https://shikhar97.github.io/" />
                 <script
                     async
                     src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"
