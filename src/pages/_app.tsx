@@ -78,14 +78,14 @@ export default function App({ Component, pageProps }: AppProps) {
                     property="og:description"
                     content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."
                 />
+                <meta name="keywords"
+                      content="Shikhar Gupta, Shikhar97, software developer, software engineer, cloud engineer, ml engineer, web developer, python developer, Tempe, aruba networks, ASU, Arizona" />
                 <meta
                     name="image"
                     property="og:image"
-                    content="/images/opengraph-image.jpg"
+                    content="https://shikhar97.github.io/images/opengraph-image.jpg"
                 />
-                <meta property="og:image:type" content="<generated>" />
-                <meta property="og:image:width" content="<generated>" />
-                <meta property="og:image:height" content="<generated>" />
+                <meta property="og:image:type" content="image/jog" />
 
                 <meta property="og:url" content="https://shikhar97.github.io/" />
                 <meta property="og:type" content="website" />
