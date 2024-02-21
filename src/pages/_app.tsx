@@ -1,12 +1,12 @@
 import GlobalStyles from "@/styles/globalStyles";
 import ResetStyles from "@/styles/resetStyles";
-import type { AppProps } from "next/app";
+import type {AppProps} from "next/app";
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import { DARK_THEME, LIGHT_THEME } from "theme";
+import {useEffect, useRef, useState} from "react";
+import {ThemeProvider} from "styled-components";
+import {DARK_THEME, LIGHT_THEME} from "theme";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({Component, pageProps}: AppProps) {
     const [lastScrollTop, setLastScrollTop] = useState<number>(0);
     const [scrollDirection, setScrollDirection] = useState<string>();
 
@@ -63,30 +63,42 @@ export default function App({ Component, pageProps }: AppProps) {
             body.style.color = activeTheme.colors.text.regular;
         }
     }
+    let photo = {
+        "url": "https://github.com/Shikhar97/Shikhar97.github.io/blob/v2/public/images/opengraph-image.png"
+    }
 
     return (
         <div className="App" onScroll={debounce(handleScroll)} ref={ref}>
             <Head>
-                <meta charSet="utf-8" />
-                <meta
-                    property="og:title"
-                    content="Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML Engineer"
-                />
-                <meta
-                    property="og:description"
-                    content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."
-                />
-                <meta
-                    property="og:image"
-                    content="images/opengraph-image.jpg"
-                />
-                <meta property="og:url" content="https://shikhar97.github.io/" />
-                <meta property="og:type" content="website" />
-                <meta
-                    name="keywords"
-                    content="Shikhar Gupta, Shikhar97, software developer, software engineer, cloud engineer, ml engineer, web developer, python developer, Tempe, aruba networks, ASU, Arizona" />
-                <meta name="google-site-verification" content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE" />
-                <link rel="canonical" href="https://shikhar97.github.io/" />
+                <meta charSet="utf-8"/>
+                <title>Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML
+                    Engineer</title>
+                <meta name="description"
+                      content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."/>
+
+                <meta property="og:url" content="https://shikhar97.github.io/"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:title"
+                      content="Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML Engineer"/>
+                <meta property="og:description"
+                      content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."/>
+                <meta property="og:image"
+                      content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shikhar97.github.io/Shikhar%20Gupta%20%7C%20Computer%20Science%20Graduate%20Student%20%7C%20Software%20Developer%20%7C%20Cloud%20Engineer%20%7C%20ML%20Engineer/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F4c58f7e1-8524-4c7b-a5c3-305cdb16dc61.jpg%3Ftoken%3D2dK5g8ViJZYACO--guzL6sOi3xKQpg77X0m6yX6NzSo%26height%3D513%26width%3D1200%26expires%3D33244548259/og.png"/>
+
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:domain" content="shikhar97.github.io"/>
+                <meta property="twitter:url" content="https://shikhar97.github.io/"/>
+                <meta name="twitter:title"
+                      content="Shikhar Gupta | Computer Science Graduate Student | Software Developer | Cloud Engineer | ML Engineer"/>
+                <meta name="twitter:description"
+                      content="Shikhar Gupta is a Computer Science Graduate Student at Arizona State University, who loves learning new things."/>
+
+                <meta name="twitter:image"
+                      content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shikhar97.github.io/Shikhar%20Gupta%20%7C%20Computer%20Science%20Graduate%20Student%20%7C%20Software%20Developer%20%7C%20Cloud%20Engineer%20%7C%20ML%20Engineer/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F4c58f7e1-8524-4c7b-a5c3-305cdb16dc61.jpg%3Ftoken%3D2dK5g8ViJZYACO--guzL6sOi3xKQpg77X0m6yX6NzSo%26height%3D513%26width%3D1200%26expires%3D33244548259/og.png"/>
+
+
+                <meta name="google-site-verification"
+                      content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE"/>
                 <script
                     async
                     src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"
@@ -102,8 +114,8 @@ export default function App({ Component, pageProps }: AppProps) {
             </Head>
 
             <ThemeProvider theme={activeTheme}>
-                <ResetStyles />
-                <GlobalStyles />
+                <ResetStyles/>
+                <GlobalStyles/>
                 <Component
                     {...pageProps}
                     scrollDirection={scrollDirection}
