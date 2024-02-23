@@ -5,7 +5,6 @@ import Head from "next/head";
 import {useEffect, useRef, useState} from "react";
 import {ThemeProvider} from "styled-components";
 import {DARK_THEME, LIGHT_THEME} from "theme";
-import Script from "next/script";
 
 export default function App({Component, pageProps}: AppProps) {
     const [lastScrollTop, setLastScrollTop] = useState<number>(0);
@@ -100,8 +99,8 @@ export default function App({Component, pageProps}: AppProps) {
 
                 <meta name="google-site-verification"
                       content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE"/>
-                <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"/>
-                <Script id="google-analytics">
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"/>
+                <script id="google-analytics">
                     {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -109,7 +108,7 @@ export default function App({Component, pageProps}: AppProps) {
                 gtag('config', 'G-JJBG91P2EL');
                 `}
 
-                </Script>
+                </script>
             </Head>
 
             <ThemeProvider theme={activeTheme}>
