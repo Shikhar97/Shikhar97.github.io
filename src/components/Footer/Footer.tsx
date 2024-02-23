@@ -1,67 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import FormattedIcon  from '@/components/icons/formattedIcon';
-import styled from 'styled-components';
-import mixins from '@/styles/mixins';
-import theme from '@/styles/theme';
-import media from '@/styles/media';
-const { colors, fontSizes, fonts } = theme;
+import FormattedIcon  from '@/components/Icons/formattedIcon';
+import styled from "styled-components";
 
-const StyledContainer = styled.footer`
-  ${mixins.flexCenter};
-  flex-direction: column;
-  padding: 15px;
-  text-align: center;
-  height: auto;
-  min-height: 70px;
-`;
-const StyledSocial = styled.div`
-  color: white;
-  width: 100%;
-  max-width: 270px;
-  margin: 0 auto 10px;
-  display: none;
+export interface IProps {
+    delegated?: any;
+}
 
-`;
-const StyledSocialList = styled.ul`
-  ${mixins.flexBetween};
-  padding: 0;
-  margin: 0;
-  list-style: none;
-`;
-const StyledSocialLink = styled.a`
-  padding: 10px;
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-`;
-const StyledMetadata = styled.div`
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.xs};
-  line-height: 1;
-`;
-const StyledGitHubLink = styled.a`
-  color: ${colors.lightSlate};
-  padding: 10px;
-`;
-const StyledGitHubInfo = styled.div`
-  margin-top: 10px;
-
-  & > span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 7px;
-  }
-  svg {
-    display: inline-block;
-    height: 15px;
-    width: auto;
-    margin-right: 5px;
-  }
-`;
-
-const Footer = () => {
+const Footer = ({ ...delegated }) => {
     const [githubInfo, setGitHubInfo] = useState({
         stars: null,
         forks: null,
@@ -81,46 +27,80 @@ const Footer = () => {
     }, []);
 
     return (
-        <StyledContainer>
-            <StyledSocial>
-                <StyledSocialList>
-                            <li key="0">
-                                <StyledSocialLink
-                                    href="https://github.com/Shikhar97"
-                                    target="_blank"
-                                    rel="nofollow noopener noreferrer"
-                                    aria-label="Shikhar Gupta">
-                                    <FormattedIcon name="GitHub" />
-                                </StyledSocialLink>
-                            </li>
-                </StyledSocialList>
-            </StyledSocial>
-            <StyledMetadata>
-                <StyledGitHubLink
-                    href="https://github.com/Shikhar97/Shikhar97.github.io/tree/v2"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer">
-                    <div>
-                        Designed &amp; Built by Shikhar Gupta<br></br><br></br>
-                    </div>
-
-                    {githubInfo.stars && githubInfo.forks && (
-                        <StyledGitHubInfo>
+        <Wrapper>
+            <StyledGitHubLink
+                href="https://github.com/Shikhar97/Shikhar97.github.io/tree/v2"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                <div>
+                    Designed &amp; Built by <strong>Shikhar Gupta</strong>
+                </div>
+            {githubInfo.stars && githubInfo.forks && (
+                <StyledGitHubInfo>
               <span>
                 <FormattedIcon name="Star" />
                 <span>{githubInfo.stars}</span>
               </span>
-                            <span>
+                    <span>
                 <FormattedIcon name="Fork" />
                 <span>{githubInfo.forks}</span>
               </span>
-                        </StyledGitHubInfo>
-                    )}
-                </StyledGitHubLink>
-            </StyledMetadata>
-        </StyledContainer>
+                </StyledGitHubInfo>
+            )}
+            </StyledGitHubLink>
+        </Wrapper>
     );
 };
+
+
+const StyledGitHubLink = styled.a`
+  color: ${({ theme }) => theme.colors.text.light};
+  text-decoration: none;
+  padding: 5px;
+  margin: auto;
+  width: 25%;
+  display: block;
+
+  & > * {
+    transition: var(--transition);
+  }
+  
+  &:hover > * {
+    color: ${({ theme }) => theme.colors.primary};
+    svg {
+      fill: ${({ theme }) => theme.colors.primary};
+    }
+    transform: scale(1.1) translateY(-2px);
+  }
+`;
+
+const StyledGitHubInfo = styled.div`
+  margin-top: 4px;
+  
+  & > span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 7px;
+  }
+  
+  svg {
+    display: inline-block;
+    height: 15px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.text.light};
+    margin-right: 4px;
+  }
+`;
+
+const Wrapper = styled.div`
+    font-weight: 400;
+    background-color: ${({ theme }) => theme.colors.footer};
+    color: ${({ theme }) => theme.colors.text.light};
+    padding: 16px;
+    text-align: center;
+    font-size: calc(14 / 16 * 1rem);
+`;
+
 
 Footer.propTypes = {
     githubInfo: PropTypes.object,

@@ -36,7 +36,7 @@ const Hero = () => {
 
 const ContentWrapper = styled.div`
     align-self: center;
-    max-width: min-content;
+    max-width: 80%;
     min-height: calc(100vh - 150px);
     padding: 32px;
     display: flex;
@@ -67,7 +67,6 @@ const SubText = styled.h3`
     color: ${({ theme }) => theme.colors.text.light};
     font-size: calc(35 / 16 * 1rem);
     margin-bottom: 24px;
-    width: max-content;
 
     ${QUERIES.tabletAndUp} {
         font-size: calc(64 / 16 * 1rem);

@@ -16,7 +16,7 @@ import {
   IconStar,
   IconTwitter,
   IconZap,
-} from 'src/components/icons/index';
+} from 'src/components/Icons/index';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {
