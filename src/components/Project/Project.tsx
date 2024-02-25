@@ -1,6 +1,6 @@
-import { QUERIES } from "breakpoints";
-import { FaGithubAlt } from "react-icons/fa";
-import { IoOpen } from "react-icons/io5";
+import {QUERIES} from "breakpoints";
+import {FaGithubAlt} from "react-icons/fa";
+import {IoOpen} from "react-icons/io5";
 import Tilt from "react-parallax-tilt";
 import styled from "styled-components";
 import {
@@ -14,7 +14,7 @@ import {
     Stretch,
 } from "../College/College";
 import SlideUp from "../SlideUp";
-import { HoverIconLink } from "../Socials/Socials";
+import {HoverIconLink} from "../Socials/Socials";
 
 export interface IProject {
     name: string;
@@ -31,7 +31,7 @@ export interface IProps {
     side: "left" | "right";
 }
 
-const Project: React.FC<IProps> = ({ project, side, ...delegated }) => {
+const Project: React.FC<IProps> = ({project, side, ...delegated}) => {
     return (
         <Wrapper side={side} {...delegated}>
             <SlideUp>
@@ -45,10 +45,10 @@ const Project: React.FC<IProps> = ({ project, side, ...delegated }) => {
                         glareBorderRadius="8px"
                     >
                         <a href={project.website}>
-                            <Image src={project.imgSrc} alt={project.name} />
+                            <Image src={project.imgSrc} alt={project.name}/>
                         </a>
                     </TiltingImage>
-                    <StaticImage src={project.imgSrc} alt={project.name} />
+                    <StaticImage src={project.imgSrc} alt={project.name}/>
                 </StretchedProject>
             </SlideUp>
 
@@ -76,14 +76,16 @@ const Project: React.FC<IProps> = ({ project, side, ...delegated }) => {
                                 href={project.github}
                                 target="_blank"
                             >
-                                <Github size={32} />
+                                <Github size={32}/>
                             </HoverIconLink>
                         )}
                     </SlideUp>
                     <SlideUp delay={300 + project.techs.length * 100}>
-                        <HoverIconLink href={project.website} target="_blank">
-                            <Website size={32} />
-                        </HoverIconLink>
+                        {project.website.length > 0 && (
+                            <HoverIconLink href={project.website} target="_blank">
+                                <Website size={32}/>
+                            </HoverIconLink>
+                        )}
                     </SlideUp>
                 </Links>
             </Info>
@@ -100,61 +102,60 @@ const iconStyle = `
 `;
 
 export const Links = styled.div<StyledProps>`
-    flex-shrink: 0;
-    display: flex;
-    gap: 32px;
-    margin-top: 16px;
-    color: ${({ theme }) => theme.colors.text.light};
+  flex-shrink: 0;
+  display: flex;
+  gap: 32px;
+  margin-top: 16px;
+  color: ${({theme}) => theme.colors.text.light};
 
-    ${QUERIES.tabletAndUp} {
-        margin-left: 32px;
-    }
+  ${QUERIES.tabletAndUp} {
+    margin-left: 32px;
+  }
 
-    ${QUERIES.desktopAndUp} {
-        margin-left: ${({ side }) => (side === "left" ? "0" : "32px")};
-        margin-right: ${({ side }) => (side === "right" ? "0" : "32px")};
-        align-self: ${({ side }) =>
+  ${QUERIES.desktopAndUp} {
+    margin-left: ${({side}) => (side === "left" ? "0" : "32px")};
+    margin-right: ${({side}) => (side === "right" ? "0" : "32px")};
+    align-self: ${({side}) =>
             side === "left" ? "flex-end" : "flex-start"};
-    }
+  }
 
-    & > * {
-        transition: var(--transition);
-    }
+  & > * {
+    transition: var(--transition);
+  }
 `;
 
 const StretchedProject = styled(Stretch)`
-    display: flex;
-    justify-content: center;
-    max-width: 525px;
-    object-fit: cover;
+  display: flex;
+  justify-content: center;
+  max-width: 525px;
+  object-fit: cover;
 `;
 
 export const Github = styled(FaGithubAlt)`
-    ${iconStyle}
+  ${iconStyle}
 `;
 
 const StaticImage = styled(Image)`
-    display: none;
+  display: none;
 
-    @media (prefers-reduced-motion: reduce) {
-        display: block;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    display: block;
+  }
 `;
 
 const TiltingImage = styled(Tilt)`
-    display: block;
+  display: block;
 
-    @media (prefers-reduced-motion: reduce) {
-        display: none;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
 `;
 
 export const Website = styled(IoOpen)`
-    ${iconStyle}
-
-    &:hover {
-        color: ${({ theme }) => theme.colors.primary};
-    }
+  ${iconStyle}
+  &:hover {
+    color: ${({theme}) => theme.colors.primary};
+  }
 `;
 
 interface StyledProps {
@@ -166,21 +167,21 @@ const Wrapper = styled(CollegeWrapper)``;
 export const Feature = styled(Degree)``;
 
 export const Tech = styled.p`
-    font-weight: 400;
-    color: ${({ theme }) => theme.colors.primary};
-    text-transform: lowercase;
-    font-size: calc(14 / 16 * 1rem);
+  font-weight: 400;
+  color: ${({theme}) => theme.colors.primary};
+  text-transform: lowercase;
+  font-size: calc(14 / 16 * 1rem);
 `;
 
 export const Name = styled(School)``;
 
 export const Description = styled(Courses)`
-    font-weight: 400;
+  font-weight: 400;
 `;
 export const Techs = styled(Data)`
-    gap: 24px;
-    display: flex;
-    /* flex-wrap: wrap; */
+  gap: 24px;
+  display: flex;
+  /* flex-wrap: wrap; */
 `;
 
 export default Project;

@@ -42,7 +42,7 @@ export default function Home({
 
                 <About theme={theme} />
                 <Experiences />
-                {/*<Projects />*/}
+                <Projects />
                 <Technical />
                 <Education />
                 <Contact />

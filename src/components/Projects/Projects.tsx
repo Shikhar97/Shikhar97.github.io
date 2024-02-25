@@ -1,6 +1,6 @@
-import { QUERIES } from "breakpoints";
+import {QUERIES} from "breakpoints";
 import styled from "styled-components";
-import { ContraintedTitle, MaxWidthWrapper } from "../Education/Education";
+import {ContraintedTitle, MaxWidthWrapper} from "../Education/Education";
 import Project from "../Project/Project";
 import ProjectGrid from "../ProjectGrid";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -8,93 +8,97 @@ import SlideUp from "../SlideUp";
 
 const PROJECTS = [
     {
-        name: "Kanban Task Manager",
-        techs: ["React", "Docker", "NodeJS", "MongoDB", "AWS"],
+        name: "Guardian Angel",
+        techs: ["Kotlin", "Python", "MongoDB", "AWS"],
         description:
-            "An accessible, responsive Kanban Task Manager built using Client-Server architecture with dynamic theming and drag-and-drop UI. Backend deployed on AWS and frontend on Netlify via CI/CD on using Github Actions. Security handled with HTTPS/SSL on AWS Application Load Balancer.",
-        github: "https://github.com/BhandarkarPawan/kanban-task-management",
-        website: "https://www.kanbhan.com/",
-        imgSrc: "/images/kanban.png",
+            "An innovative Android application designed to enhance the well-being and safety of users by monitoring and " +
+            "providing personalized suggestions for various aspects of their daily lives.",
+        github: "https://github.com/Shikhar97/Guardian-Angel",
+        website: "",
+        imgSrc: "/images/diashield.jpeg",
         type: "Featured Project",
     },
     {
-        name: "Emergency Social Network",
-        techs: ["HTML", "CSS", "NodeJS", "MongoDB", "figma"],
-        description:
-            "An emergency communication system for real-time SOS messaging during earthquakes. Built in a fast paced Agile environment with a team of 5. The app was designed and developed the project using Object Oriented Analysis and Programming principles.",
-        github: "",
-        website: "https://esn.onrender.com",
-        imgSrc: "/images/esn-app.png",
-        type: "Featured Project",
-    },
-    {
-        name: "Refriendo",
+        name: "CloudVision: Serverless Video Analysis Platform",
         techs: [
-            "React",
-            "Typescript",
+            "Python",
             "Go",
-            "MongoDB",
-            "Figma",
+            "DynamoDB",
+            "OpenFaas",
+            "Ceph",
             "AWS",
             "Docker",
+            "Kubernetes",
         ],
         description:
-            "I am building a social media platform for people to create and host events in their neighbourhoods and friend circles. The involves several features such as a feed, event creation, event hosting, management, discovery, and more. For this project, I designed the UI/UX with Figma, Frontend with React, and Backend with Go and MongoDB. This is my most ambitious project yet and I am excited to see where it goes.",
-        github: "https://github.com/BhandarkarPawan/refriendo",
-        website: "https://refriendo.netlify.app/",
-        imgSrc: "/images/refriendo-project.png",
-        type: "Work in Progress",
+            "This project involves the integration of AWS services, OpenFaaS, Ceph, and other tools to perform cloud-based video processing and data analysis. " +
+            "The primary goal is to develop a system that can handle automated video analysis tasks, such as face recognition, using serverless " +
+            "functions and distributed storage.",
+        github: "https://github.com/Shikhar97/Hybrid-Cloud",
+        website: "",
+        imgSrc: "/images/cloudvidpro.jpg",
+        type: "Featured Project",
     },
+
     {
-        name: "Rock Paper Scissors Lizard Spock",
-        techs: ["TailwindCSS", "NextJS", "Vercel", "Typescript"],
+        name: "Generating Visualization Using Large Language Models",
+        techs: ["Python", "D3.js", "HTML", "CSS", "GPT", "Vega-Lite"],
         description:
-            "Built a Rock Paper Scissors Lizard Spock game based on a Frontend Mentor design. I worked on this project when I challenged myself to learn and apply NextJS in a project. The game includes a score tracker and can be played comfortably on either desktop or mobile.",
-        github: "https://github.com/BhandarkarPawan/rock-paper-scissors",
-        website: "https://jankengu.vercel.app/",
-        imgSrc: "/images/jankengu.png",
+            "An automated system that generates high-quality visualizations based on user requirements utilizing GPT-3 and VegaLite.",
+        github: "",
+        website: "https://www.youtube.com/watch?v=rs1GStvE9x0",
+        imgSrc: "/images/llmvis.png",
+        type: "Side Project",
+    },
+
+    {
+        name: "JSRT organ segmentation using U-Net",
+        techs: ["TailwindCSS", "NextJS", "Vercel", "Typescript"],
+        description: "",
+        github: "",
+        website: "",
+        imgSrc: "/images/janke12ngu.png",
         type: "Side Project",
     },
     {
-        name: "Product Preview Card",
+        name: "Spatial Analysis and Hot Spot Identification",
         techs: ["HTML", "CSS", "figma"],
         description:
-            "At the very start of my CSS journey, I built this responsive product preview card. I used vanilla CSS to build this project diving into the world of flexbox and CSS variables. While the project is simple, it was a great learning experience for me and gave me the confidence to build more complex projects.",
-        github: "https://github.com/BhandarkarPawan/product-preview-card-component",
-        website:
-            "https://bhandarkarpawan-product-preview-card-component.netlify.app/",
-        imgSrc: "/images/productpreview.png",
+            "",
+        github: "",
+        website: "",
+        imgSrc: "/images/productprevie1.png",
         type: "Side Project",
     },
     {
-        name: "Skilled Learning",
-        techs: ["Styled Components", "React", "JavaScript"],
+        name: "Innovative Visualizations using D3",
+        techs: ["D3.js", "HTML", "CSS", "Bootstrap", "JavaScript", "React.js"],
         description:
-            "After mastering the basics of CSS, I wanted to learn a CSS-in-JS library. I chose Styled Components and built this landing page. I also used React to build the project and deployed it on Netlify. This project also helped me pick up some new CSS skills along the way, in the form of CSS Grids for responsive layouts.",
-        github: "https://github.com/BhandarkarPawan/skilled-elearning-landing-page",
-        website: "https://skilledlearning.netlify.app",
-        imgSrc: "/images/skilled.png",
+            "The project goes beyond common chart types and presents the data in a creative manner, making it interesting and informative for a general audience. The visualization is designed for museum visitors and effectively communicates information about the exoplanets discovered by NASA missions.",
+        github: "https://github.com/Shikhar97/D3-Innovative-Visualization",
+        website: "",
+        imgSrc: "/images/skilled1.png",
         type: "Side Project",
     },
     {
-        name: "Splitter",
-        techs: ["HTML", "TailwindCSS", "JavaScript"],
+        name: "Google-Dino using CNN",
+        techs: ["Python", "NumPy", "Pandas", "PyTorch", "OpenCV"],
         description:
-            "A tip calculator app built using TailwindCSS. Using this app, users are able to split the bill and tip amount between multiple people. The app is responsive and works on both desktop and mobile. I built this project to learn TailwindCSS and to get more comfortable with JavaScript. ",
-        github: "https://github.com/BhandarkarPawan/tip-calculator",
-        website: "https://tipped.netlify.app/",
-        imgSrc: "/images/splitter.png",
+            "Google-Dino uses Convolutional Neural Networks (CNN) to train an AI model to play the popular Google Chrome Dinosaur game, achieving high scores and demonstrating sophisticated decision-making capabilities.",
+        github: "https://github.com/Shikhar97/Google-dragon",
+        website: "",
+        imgSrc: "/images/dino.jpeg",
         type: "Side Project",
     },
     {
-        name: "Whatsapp UI Clone",
-        techs: ["HTML", "CSS", "JavaScript"],
+        name: "InstaClone",
+        techs: ["Python", "Flask", "HTML", "CSS", "JavaScript", "Bootstrap"],
         description:
-            "I literally have no idea why I did this. One day I decided to just build a pixel-perfect clone of the Whatsapp desktop UI and I did. I found this repo while cleaning up my Github and thought it was cool enough for my portfolio lol.",
-        github: "https://github.com/BhandarkarPawan/WhatsappClone",
-        website: "https://notwhatsapp.netlify.app/",
-        imgSrc: "/images/notsapp.png",
-        type: "It's Something",
+            "A webapp to implement the basic functionality of instagram using flask.",
+        github: "https://github.com/Shikhar97/Mini-Instagram",
+        website: "",
+        imgSrc: "/images/instaclone.png",
+        type: "Side Project",
     },
 ];
 
@@ -103,31 +107,31 @@ const Projects: React.FC = () => {
         <Wrapper id="projects">
             <MaxWidthWrapper>
                 <SlideUp>
-                    <ContraintedTitle label="Things I've Built" side="left" />
+                    <ContraintedTitle label="Things I've Built" side="left"/>
                 </SlideUp>
-                <Project project={PROJECTS[0]} side="left" />
+                <Project project={PROJECTS[0]} side="left"/>
             </MaxWidthWrapper>
-            <Project project={PROJECTS[1]} side="right" />
+            <Project project={PROJECTS[1]} side="right"/>
 
-            <ProjectGrid projects={PROJECTS.slice(2)} />
+            <ProjectGrid projects={PROJECTS.slice(2)}/>
         </Wrapper>
     );
 };
 
 const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.colors.background.dark};
-    padding: 32px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  background-color: ${({theme}) => theme.colors.background.dark};
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 
-    ${QUERIES.tabletAndUp} {
-        padding: 64px 64px;
-    }
+  ${QUERIES.tabletAndUp} {
+    padding: 64px 64px;
+  }
 
-    ${QUERIES.desktopAndUp} {
-        gap: 32px;
-    }
+  ${QUERIES.desktopAndUp} {
+    gap: 32px;
+  }
 `;
 
 const Title = styled(SectionTitle)``;
