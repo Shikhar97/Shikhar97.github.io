@@ -1,3 +1,4 @@
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/shikharg)
 <div style="text-align:center">
   <img alt="Logo" src="https://github.com/Shikhar97/Shikhar97.github.io/blob/v2/public/images/logo.png" width="100" />
 </div>
