@@ -78,13 +78,14 @@ const ProjectGrid: React.FC<React.PropsWithChildren<IProps>> = ({
                                     <Github size={32} />
                                 </HoverIconLink>
                             )}
-
+                            {selectedProject.website.length > 0 && (
                             <HoverIconLink
                                 href={selectedProject.website}
                                 target="_blank"
                             >
                                 <Website size={32} />
                             </HoverIconLink>
+                            )}
                         </Links>
                         <WrappingTechs side="right">
                             {selectedProject.techs.map((tech, idx) => (
@@ -303,7 +304,7 @@ export const Info = styled.div`
 `;
 
 export const ProjectImage = styled.img`
-    width: 100%;
+    width: auto;
     height: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -312,7 +313,7 @@ export const ProjectImage = styled.img`
 const CustomTilt = styled(Tilt)`
     border-radius: 8px;
     ${QUERIES.desktopAndUp} {
-        height: 100%;
+        height: 65%;
     }
 
     ${QUERIES.desktopAndUp} {

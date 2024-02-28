@@ -9,7 +9,7 @@ import SlideUp from "../SlideUp";
 const PROJECTS = [
     {
         name: "Guardian Angel",
-        techs: ["Kotlin", "Python", "MongoDB", "AWS"],
+        techs: ["Kotlin", "RoomsDB", "Python", "MongoDB", "Heroku"],
         description:
             "An innovative Android application designed to enhance the well-being and safety of users by monitoring and " +
             "providing personalized suggestions for various aspects of their daily lives.",
@@ -52,22 +52,22 @@ const PROJECTS = [
     },
 
     {
-        name: "JSRT organ segmentation using U-Net",
-        techs: ["TailwindCSS", "NextJS", "Vercel", "Typescript"],
-        description: "",
+        name: "Firearm Detection",
+        techs: ["AWS", "MongoDB", "Docker", "Terraform", "Helm", "Kubernetes", "Kafka", "Zookeeper"],
+        description: "I developed a real-time object detection model in C++ and linked it with ONNX runtime, which slashed the inference time by 80% for pipeline operations. Additionally, I constructed a Kafka pipeline on AWS EKS to manage continuous frame streams, thereby optimizing the process of routing model inferences to an S3 bucket and MongoDB database for subsequent analysis and retrieval.",
         github: "",
         website: "",
-        imgSrc: "/images/janke12ngu.png",
+        imgSrc: "/images/gundetect.png",
         type: "Side Project",
     },
     {
         name: "Spatial Analysis and Hot Spot Identification",
-        techs: ["HTML", "CSS", "figma"],
+        techs: ["Python", "Scala", "Spark", "Docker", "Git"],
         description:
-            "",
-        github: "",
+            "I employed SparkSQL to perform spatial queries, including range and distance join operations, on the NYC Taxi Trip dataset, facilitating the efficient processing of large, unstructured data. Furthermore, I devised user-defined functions in SparkSQL to extract crucial operational and strategic data, which proved instrumental in daily decision-making. Lastly, I undertook a spatial hot spot analysis using Scala and Apache Spark, uncovering statistically significant insights.",
+        github: "https://github.com/Shikhar97/Spatial-Hotspot-Analysis",
         website: "",
-        imgSrc: "/images/productprevie1.png",
+        imgSrc: "/images/nyc.webp",
         type: "Side Project",
     },
     {
@@ -77,14 +77,14 @@ const PROJECTS = [
             "The project goes beyond common chart types and presents the data in a creative manner, making it interesting and informative for a general audience. The visualization is designed for museum visitors and effectively communicates information about the exoplanets discovered by NASA missions.",
         github: "https://github.com/Shikhar97/D3-Innovative-Visualization",
         website: "",
-        imgSrc: "/images/skilled1.png",
+        imgSrc: "/images/innovative.png",
         type: "Side Project",
     },
     {
         name: "Google-Dino using CNN",
         techs: ["Python", "NumPy", "Pandas", "PyTorch", "OpenCV"],
         description:
-            "Google-Dino uses Convolutional Neural Networks (CNN) to train an AI model to play the popular Google Chrome Dinosaur game, achieving high scores and demonstrating sophisticated decision-making capabilities.",
+            "I crafted and trained Google-Dino, leveraging Convolutional Neural Networks (CNN) to excel in the Google Chrome Dinosaur game. The model adeptly assesses the game screen, making astute decisions and consistently achieving high scores. This project underscores the application of machine learning in gaming and the prowess of CNNs in real-time decision-making tasks.",
         github: "https://github.com/Shikhar97/Google-dragon",
         website: "",
         imgSrc: "/images/dino.jpeg",
@@ -94,7 +94,7 @@ const PROJECTS = [
         name: "InstaClone",
         techs: ["Python", "Flask", "HTML", "CSS", "JavaScript", "Bootstrap"],
         description:
-            "A webapp to implement the basic functionality of instagram using flask.",
+            "A web application that emulates the core features of Instagram, such as posting and sharing photos, following other users, and liking posts, is developed using Flask.This application allows users to create accounts, upload photos, and interact with other users in a manner similar to Instagram. While the full suite of features may not be replicated, the fundamental aspects are implemented, providing a platform for users to engage in photo sharing and social networking. ",
         github: "https://github.com/Shikhar97/Mini-Instagram",
         website: "",
         imgSrc: "/images/instaclone.png",
