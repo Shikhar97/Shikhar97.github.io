@@ -17,8 +17,8 @@ const Navigation = () => {
                 <LinkText>Contact</LinkText>
                 Contact
             </NavLink>
-            <DownloadLink href="resume.pdf" target="_blank">
-                Resume
+            <DownloadLink href="/resume" target="_blank">
+                Resumé
                 <FaDownload />
             </DownloadLink>
         </>

@@ -56,7 +56,7 @@ const College: React.FC<IProps> = ({
                 <Courses side={side}>
                     <Title>Courses</Title>
                     {courses.map((course, i) => (
-                        <Course key={i}>{course}</Course>
+                        <Course key={course}>{course}</Course>
                     ))}
                 </Courses>
                 <SlideUp delay={200}>

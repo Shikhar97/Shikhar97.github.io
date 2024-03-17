@@ -5,6 +5,7 @@ import Head from "next/head";
 import {useEffect, useRef, useState} from "react";
 import {ThemeProvider} from "styled-components";
 import {DARK_THEME, LIGHT_THEME} from "theme";
+import {GoogleAnalytics} from "@next/third-parties/google";
 
 export default function App({Component, pageProps}: AppProps) {
     const [lastScrollTop, setLastScrollTop] = useState<number>(0);
@@ -63,9 +64,6 @@ export default function App({Component, pageProps}: AppProps) {
             body.style.color = activeTheme.colors.text.regular;
         }
     }
-    let photo = {
-        "url": "https://github.com/Shikhar97/Shikhar97.github.io/blob/v2/public/images/opengraph-image.png"
-    }
 
     return (
         <div className="App" onScroll={debounce(handleScroll)} ref={ref}>
@@ -99,16 +97,7 @@ export default function App({Component, pageProps}: AppProps) {
 
                 <meta name="google-site-verification"
                       content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE"/>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJBG91P2EL"/>
-                <script id="google-analytics">
-                    {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-JJBG91P2EL');
-                `}
-
-                </script>
+                <GoogleAnalytics gaId="G-JJBG91P2EL" />
             </Head>
 
             <ThemeProvider theme={activeTheme}>
