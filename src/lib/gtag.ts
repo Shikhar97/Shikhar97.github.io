@@ -1,26 +1,24 @@
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
-/**
- * This function is used to track page views.
- * https://developers.google.com/analytics/devguides/collection/gtagjs/pages
- * */
-export const pageView = (url: URL) => {
-    console.log('pageView', url)
+export const pageview = (url: URL) => {
     // @ts-ignore
-    window.gtag('config', GA_TRACKING_ID, {
+    window.gtag("config", GA_TRACKING_ID, {
         page_path: url
-    })
+    });
+};
 
-}
+type GTagEvent = {
+    action: string;
+    category: string;
+    label: string;
+    value: number;
+};
 
-/**
- * https://developers.google.com/analytics/devguides/collection/gtagjs/events
- * If you want to track events, you can use the gtag.js event method.
- * */
-export const event = (action: Gtag.EventNames, { event_category, event_label, value }: Gtag.EventParams) => {
-    window.gtag('event', action, {
-        event_category,
-        event_label,
-        value
-    })
-}
+// https://developers.google.com/analytics/devguides/collection/gtagjs/events
+export const event = ({ action, category, label, value }: GTagEvent) => {
+    window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value: value
+    });
+};
