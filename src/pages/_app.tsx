@@ -5,7 +5,8 @@ import Head from "next/head";
 import {useEffect, useRef, useState} from "react";
 import {ThemeProvider} from "styled-components";
 import {DARK_THEME, LIGHT_THEME} from "theme";
-import {GoogleAnalytics} from "@next/third-parties/google";
+import { useRouter } from 'next/router'
+import * as gtag from '../lib/gtag'
 
 export default function App({Component, pageProps}: AppProps) {
     const [lastScrollTop, setLastScrollTop] = useState<number>(0);
@@ -65,6 +66,17 @@ export default function App({Component, pageProps}: AppProps) {
         }
     }
 
+    const router = useRouter()
+    useEffect(() => {
+        const handleRouteChange = (url: URL) => {
+            gtag.pageView(url)
+        }
+        router.events.on('routeChangeComplete', handleRouteChange)
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange)
+        }
+    }, [router.events])
+
     return (
         <div className="App" onScroll={debounce(handleScroll)} ref={ref}>
             <Head>
@@ -95,9 +107,6 @@ export default function App({Component, pageProps}: AppProps) {
                       content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shikhar97.github.io/Shikhar%20Gupta%20%7C%20Computer%20Science%20Graduate%20Student%20%7C%20Software%20Developer%20%7C%20Cloud%20Engineer%20%7C%20ML%20Engineer/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F4c58f7e1-8524-4c7b-a5c3-305cdb16dc61.jpg%3Ftoken%3D2dK5g8ViJZYACO--guzL6sOi3xKQpg77X0m6yX6NzSo%26height%3D513%26width%3D1200%26expires%3D33244548259/og.png"/>
 
 
-                <meta name="google-site-verification"
-                      content="q3Nu_ImkB6SquSPqU3x_kZFQOPUTvZNXjdROKCICIJE"/>
-                <GoogleAnalytics gaId="G-JJBG91P2EL" />
             </Head>
 
             <ThemeProvider theme={activeTheme}>
