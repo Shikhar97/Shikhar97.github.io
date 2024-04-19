@@ -47,7 +47,7 @@ const PROJECTS = [
             "An automated system that generates high-quality visualizations based on user requirements utilizing GPT-3 and VegaLite.",
         github: "",
         website: "https://www.youtube.com/watch?v=rs1GStvE9x0",
-        imgSrc: "/images/llmvis.png",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/KeyValueStore",
         type: "Side Project",
     },
 
@@ -57,7 +57,7 @@ const PROJECTS = [
         description: "I developed a real-time object detection model in C++ and linked it with ONNX runtime, which slashed the inference time by 80% for pipeline operations. Additionally, I constructed a Kafka pipeline on AWS EKS to manage continuous frame streams, thereby optimizing the process of routing model inferences to an S3 bucket and MongoDB database for subsequent analysis and retrieval.",
         github: "",
         website: "",
-        imgSrc: "/images/gundetect.png",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/FirearmDetection",
         type: "Side Project",
     },
     {
@@ -67,7 +67,7 @@ const PROJECTS = [
             "I employed SparkSQL to perform spatial queries, including range and distance join operations, on the NYC Taxi Trip dataset, facilitating the efficient processing of large, unstructured data. Furthermore, I devised user-defined functions in SparkSQL to extract crucial operational and strategic data, which proved instrumental in daily decision-making. Lastly, I undertook a spatial hot spot analysis using Scala and Apache Spark, uncovering statistically significant insights.",
         github: "https://github.com/Shikhar97/Spatial-Hotspot-Analysis",
         website: "",
-        imgSrc: "/images/nyc.webp",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/Spatial-Hotspot-Analysis",
         type: "Side Project",
     },
     {
@@ -77,7 +77,7 @@ const PROJECTS = [
             "The project goes beyond common chart types and presents the data in a creative manner, making it interesting and informative for a general audience. The visualization is designed for museum visitors and effectively communicates information about the exoplanets discovered by NASA missions.",
         github: "https://github.com/Shikhar97/D3-Innovative-Visualization",
         website: "",
-        imgSrc: "/images/innovative.png",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/D3-Innovative-Visualization",
         type: "Side Project",
     },
     {
@@ -87,7 +87,7 @@ const PROJECTS = [
             "I crafted and trained Google-Dino, leveraging Convolutional Neural Networks (CNN) to excel in the Google Chrome Dinosaur game. The model adeptly assesses the game screen, making astute decisions and consistently achieving high scores. This project underscores the application of machine learning in gaming and the prowess of CNNs in real-time decision-making tasks.",
         github: "https://github.com/Shikhar97/Google-dragon",
         website: "",
-        imgSrc: "/images/dino.jpeg",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/Google-dragon",
         type: "Side Project",
     },
     {
@@ -97,7 +97,7 @@ const PROJECTS = [
             "A web application that emulates the core features of Instagram, such as posting and sharing photos, following other users, and liking posts, is developed using Flask.This application allows users to create accounts, upload photos, and interact with other users in a manner similar to Instagram. While the full suite of features may not be replicated, the fundamental aspects are implemented, providing a platform for users to engage in photo sharing and social networking. ",
         github: "https://github.com/Shikhar97/Mini-Instagram",
         website: "",
-        imgSrc: "/images/instaclone.png",
+        imgSrc: "https://opengraph.githubassets.com/1afeafda/Shikhar97/Mini-Instagram",
         type: "Side Project",
     },
 ];
