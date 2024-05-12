@@ -1,0 +1,6 @@
+.link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  pointer-events: all;
+}
