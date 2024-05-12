@@ -1,0 +1,27 @@
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text-regular);
+  font-size: calc(20 / 16 * 1rem);
+}
+
+.navText {
+  position: absolute;
+  color: var(--color-primary);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: clip-path 0.4s ease-out;
+}
+
+.navLink:hover .navText {
+  transition: clip-path 0.3s ease-in;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.downloadLink {
+  text-decoration: none;
+  color: var(--color-text-dark);
+  font-size: calc(20 / 16 * 1rem);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}

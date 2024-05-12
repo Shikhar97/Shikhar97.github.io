@@ -1,95 +1,40 @@
+"use client";
 import Button from "@/components/Button";
-import { QUERIES } from "breakpoints";
-import styled from "styled-components";
-import Highlight from "../Highlight";
-import Link from "../Link";
+import Highlight from "@/components/Highlight";
+import Link from "@/components/Link";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
-    const scrollToContact = () => {
-        const contact = document.getElementById("contact");
-        contact!.scrollIntoView({ behavior: "smooth" });
-    };
+  const scrollToContact = () => {
+    const contact = document.getElementById("contact");
+    contact!.scrollIntoView({ behavior: "smooth" });
+  };
 
-    return (
-        <ContentWrapper>
-            <Text>
-                <Highlight>Hi, my name is</Highlight>
-            </Text>
-            <Name>Shikhar Gupta.</Name>
-            <SubText>I love challenging myself every day!</SubText>
-            <Text>
-                I bring over 3 years of experience specializing in full-stack development, CI/CD, cloud infrastructure, and automation.
-                Currently, I’m pursuing a Master’s
-                degree in Computer Science at{" "}
-                <Link
-                    href="https://www.asu.edu/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >
-                    <Highlight>Arizona State University</Highlight>
-                </Link>
-            </Text>
-            <CallToAction onClick={scrollToContact}>Get In Touch</CallToAction>
-        </ContentWrapper>
-    );
+  return (
+    <div className={styles.hero}>
+      <p className={styles.text}>
+        <Highlight>Hi, my name is</Highlight>
+      </p>
+      <h2 className={styles.name}>Shikhar Gupta. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
+      <h3 className={styles.subText}>I love challenging myself every day</h3>
+      <p className={styles.description}>
+          I bring over 3 years of experience specializing in full-stack development, CI/CD,
+          cloud infrastructure, and automation.
+          I have recently graduated from {" "}&nbsp;
+        <Link
+          href="https://www.asu.edu/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Highlight>Arizona State University </Highlight>
+        </Link>
+           with a Masters in Computer Science.
+      </p>
+      <Button className={styles.callToAction} onClick={scrollToContact}>
+        Get In Touch
+      </Button>
+    </div>
+  );
 };
-
-const ContentWrapper = styled.div`
-    align-self: center;
-    max-width: 80%;
-    min-height: calc(100vh - 150px);
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 2;
-    pointer-events: none;
-`;
-
-const Name = styled.h2`
-    white-space: nowrap;
-    font-size: calc(35 / 16 * 1rem);
-    margin-bottom: -16px;
-
-    ${QUERIES.tabletAndUp} {
-        font-size: calc(64 / 16 * 1rem);
-        margin-bottom: -32px;
-    }
-
-    ${QUERIES.desktopAndUp} {
-        font-size: calc(80 / 16 * 1rem);
-        margin-bottom: -32px;
-    }
-`;
-
-const SubText = styled.h3`
-    color: ${({ theme }) => theme.colors.text.light};
-    font-size: calc(35 / 16 * 1rem);
-    margin-bottom: 24px;
-
-    ${QUERIES.tabletAndUp} {
-        font-size: calc(64 / 16 * 1rem);
-    }
-
-    ${QUERIES.desktopAndUp} {
-        font-size: calc(80 / 16 * 1rem);
-    }
-`;
-
-const Text = styled.p`
-    color: ${({ theme }) => theme.colors.text.regular};
-    font-weight: 400;
-    margin-bottom: -4px;
-
-    ${QUERIES.tabletAndUp} {
-        margin-bottom: -8px;
-    }
-`;
-
-const CallToAction = styled(Button)`
-    margin-top: 32px;
-    pointer-events: all;
-`;
 
 export default Hero;

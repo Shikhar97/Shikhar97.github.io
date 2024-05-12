@@ -1,34 +1,15 @@
-import { QUERIES } from "breakpoints";
-import styled from "styled-components";
+import clsx from "clsx";
+import styles from "./Button.module.css";
+import { ComponentProps } from "react";
 
-export interface IProps {
-    onClick?: () => void;
-    delegated?: any;
-}
+interface Props extends ComponentProps<"button"> {}
 
-const Button: React.FC<React.PropsWithChildren<IProps>> = ({
-    children,
-    ...delegated
-}) => {
-    return <Wrapper {...delegated}>{children}</Wrapper>;
+const Button: React.FC<Props> = ({ children, className, ...delegated }) => {
+  return (
+    <button className={clsx(styles.button, className)} {...delegated}>
+      {children}
+    </button>
+  );
 };
-
-const Wrapper = styled.button`
-    color: ${({ theme }) => theme.colors.primary};
-    background-color: transparent;
-    border: 1px solid;
-    border-radius: 8px;
-    padding: 10px 16px;
-    transition: var(--transition);
-
-    ${QUERIES.tabletAndUp} {
-        padding: 16px 32px;
-    }
-
-    &:hover {
-        background-color: ${({ theme }) => theme.colors.primary};
-        color: ${({ theme }) => theme.colors.background.light};
-    }
-`;
 
 export default Button;

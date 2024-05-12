@@ -1,245 +1,70 @@
-import { QUERIES } from "breakpoints";
-import Tilt from "react-parallax-tilt";
-import styled from "styled-components";
-import SlideUp from "../SlideUp";
+import styles from "./College.module.css";
+import Image from "next/image";
+import clsx from "clsx";
+import Title from "@/components/Title";
 
 export interface IProps {
-    degree: string;
-    school: string;
-    courses: string[];
-    start: number;
-    end: number;
-    gpa: string;
-    imgSrc: string;
-    side: "left" | "right";
+  degree: string;
+  school: string;
+  courses: string[];
+  start: number;
+  end: number;
+  gpa: string;
+  imgSrc: string;
+  side: "left" | "right";
 }
 
 const College: React.FC<IProps> = ({
-    degree,
-    school,
-    courses,
-    start,
-    end,
-    gpa,
-    imgSrc,
-    side,
-    ...delegated
+  degree,
+  school,
+  courses,
+  start,
+  end,
+  gpa,
+  imgSrc,
+  side,
+  ...delegated
 }) => {
-    const smallImg = imgSrc.replace(".jpeg", "-small.jpeg");
+  const smallImg = imgSrc.replace(".png", "-small.png");
 
-    return (
-        <Wrapper side={side} {...delegated}>
-            <SlideUp>
-                <Stretch>
-                    <Tilt
-                        tiltMaxAngleX={3}
-                        tiltMaxAngleY={3}
-                        glareEnable={true}
-                        glarePosition="top"
-                        glareMaxOpacity={0.3}
-                        glareBorderRadius="8px"
-                    >
-                        <Image src={imgSrc} alt={school} />
-                    </Tilt>
-                </Stretch>
-            </SlideUp>
-            <Info side={side}>
-                <SlideUp delay={200}>
-                    <SmallImage src={smallImg} alt={school} />
-                </SlideUp>
-                <SlideUp delay={200}>
-                    <Degree side={side}>{degree}</Degree>
-                </SlideUp>
-                <SlideUp delay={200}>
-                    <School side={side}>{school}</School>
-                </SlideUp>
-                <Courses side={side}>
-                    <Title>Courses</Title>
-                    {courses.map((course, i) => (
-                        <Course key={course}>{course}</Course>
-                    ))}
-                </Courses>
-                <SlideUp delay={200}>
-                    <Data side={side}>
-                        <Time>
-                            {start} - {end}
-                        </Time>
-                        <GPA>GPA: {gpa}</GPA>
-                    </Data>
-                </SlideUp>
-            </Info>
-        </Wrapper>
-    );
+  return (
+    <div className={clsx(styles.college, styles[side])} {...delegated}>
+      <div className={styles.stretch}>
+        <Image
+          className={styles.image}
+          height={300}
+          width={400}
+          src={imgSrc}
+          alt={school}
+        />
+      </div>
+      <div className={clsx(styles.info, styles[side])}>
+        <Image
+          className={styles.smallImage}
+          src={smallImg}
+          alt={school}
+          width={300}
+          height={400}
+        />
+        <h4 className={clsx(styles.degree, styles[side])}>{degree}</h4>
+        <h4 className={clsx(styles.school, styles[side])}>{school}</h4>
+        <ul className={clsx(styles.courses, styles[side])}>
+          <Title>Courses</Title>
+          {courses.map((course, i) => (
+            <li className={styles.course} key={i}>
+              {course}
+            </li>
+          ))}
+        </ul>
+        <ul className={clsx(styles.data, styles[side])}>
+          <p className={styles.time}>
+            {start} - {end}
+          </p>
+          <p className={styles.gpa}>GPA: {gpa}</p>
+        </ul>
+      </div>
+    </div>
+  );
 };
-
-interface StyledProps {
-    side: "left" | "right";
-}
-
-export const Wrapper = styled.div<StyledProps>`
-    display: flex;
-    isolation: isolate;
-    justify-content: center;
-    flex-direction: column;
-
-    ${QUERIES.desktopAndUp} {
-        flex-direction: ${({ side }) =>
-            side === "left" ? "row" : "row-reverse"};
-    }
-`;
-
-export const Stretch = styled.div`
-    /* margin-left: -32px;
-    margin-right: -32px; */
-
-    ${QUERIES.desktopAndUp} {
-        margin-left: 0;
-        margin-right: 0;
-    }
-`;
-
-export const Image = styled.img`
-    width: 100%;
-    max-width: 650px;
-    max-height: 500px;
-    object-fit: cover;
-    z-index: 1;
-    line-height: 0;
-
-    ${QUERIES.tabletAndUp} {
-        display: none;
-    }
-
-    ${QUERIES.desktopAndUp} {
-        display: block;
-        border-radius: 8px;
-    }
-`;
-
-const SmallImage = styled.img`
-    display: none;
-    height: 120px;
-    width: 120px;
-    position: absolute;
-    right: 32px;
-    border: 2px solid ${({ theme }) => theme.colors.primary};
-    border-radius: 8px;
-
-    ${QUERIES.tabletAndUp} {
-        display: block;
-    }
-
-    ${QUERIES.desktopAndUp} {
-        display: none;
-    }
-`;
-
-export const Info = styled.div<StyledProps>`
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    position: relative;
-
-    ${QUERIES.desktopAndUp} {
-        width: 500px;
-        align-items: ${({ side }) =>
-            side === "left" ? "flex-end" : "flex-start"};
-        margin-left: ${({ side }) => (side === "left" ? "-32px" : "0")};
-        margin-right: ${({ side }) => (side === "right" ? "-32px" : "0")};
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-`;
-
-export const Degree = styled.h4<StyledProps>`
-    color: ${({ theme }) => theme.colors.primary};
-    font-weight: 400;
-    font-size: calc(14 / 16 * 1rem);
-    margin-top: 16px;
-
-    ${QUERIES.tabletAndUp} {
-        margin-left: 32px;
-        font-size: calc(16 / 16 * 1rem);
-    }
-
-    ${QUERIES.desktopAndUp} {
-        font-size: calc(18 / 16 * 1rem);
-        margin-left: ${({ side }) => (side === "left" ? "0" : "32px")};
-        margin-right: ${({ side }) => (side === "right" ? "0" : "32px")};
-    }
-`;
-
-export const School = styled.h4<StyledProps>`
-    margin-bottom: 16px;
-    font-size: calc(21 / 16 * 1rem);
-
-    ${QUERIES.tabletAndUp} {
-        margin-left: 32px;
-        font-size: calc(24 / 16 * 1rem);
-    }
-
-    ${QUERIES.desktopAndUp} {
-        font-size: calc(28 / 16 * 1rem);
-        margin-left: ${({ side }) => (side === "left" ? "0" : "32px")};
-        margin-right: ${({ side }) => (side === "right" ? "0" : "32px")};
-    }
-`;
-
-export const Courses = styled.ul<StyledProps>`
-    background-color: ${({ theme }) => theme.colors.background.light};
-    padding: 32px;
-
-    display: flex;
-    flex-direction: column;
-    margin-left: -32px;
-    margin-right: -32px;
-
-    ${QUERIES.tabletAndUp} {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 8px;
-    }
-
-    ${QUERIES.desktopAndUp} {
-        align-items: ${({ side }) =>
-            side === "left" ? "flex-end" : "flex-start"};
-    }
-`;
-
-export const Title = styled.h3`
-    color: ${({ theme }) => theme.colors.primary};
-    margin-bottom: 8px;
-`;
-
-const Course = styled.li`
-    font-weight: 400;
-`;
-
-export const Data = styled.ul<StyledProps>`
-    margin-top: 16px;
-    display: flex;
-    gap: 64px;
-    font-size: calc(20 / 16 * 1rem);
-
-    ${QUERIES.tabletAndUp} {
-        margin-left: 32px;
-    }
-
-    ${QUERIES.desktopAndUp} {
-        margin-left: ${({ side }) => (side === "left" ? "0" : "32px")};
-        margin-right: ${({ side }) => (side === "right" ? "0" : "32px")};
-        align-self: ${({ side }) =>
-            side === "left" ? "flex-end" : "flex-start"};
-    }
-`;
-
-const Time = styled.p`
-    font-weight: 400;
-`;
-
-const GPA = styled.p`
-    color: ${({ theme }) => theme.colors.primary};
-`;
 
 export default College;

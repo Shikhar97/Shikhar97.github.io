@@ -1,0 +1,49 @@
+.email {
+  position: fixed;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 24px;
+  z-index: 50;
+
+  bottom: 0;
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .email {
+    display: flex;
+    right: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .email {
+    right: 32px;
+  }
+}
+
+.link {
+  color: var(--color-text-light);
+  transform: rotate(-90deg) translateX(50%) translateY(-10%);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-primary);
+  transform: rotate(-90deg) translateX(50%) translateY(-10%) translateX(8px)
+    scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .line {
+    border: 1px solid var(--color-text-light);
+    height: 100px;
+    width: 0px;
+  }
+}

@@ -1,18 +1,14 @@
-import styled from "styled-components";
+import { ComponentProps } from "react";
+import styles from "./Highlight.module.css";
 
-export interface IProps {
-    delegated?: any;
-}
+interface Props extends ComponentProps<"strong"> {}
 
-const Highlight: React.FC<React.PropsWithChildren<IProps>> = ({
-    children,
-    ...delegated
-}) => {
-    return <Wrapper {...delegated}>{children}</Wrapper>;
+const Highlight = ({ children, ...delegated }: Props) => {
+  return (
+    <strong className={styles.highlight} {...delegated}>
+      {children}
+    </strong>
+  );
 };
-
-const Wrapper = styled.span`
-    color: ${({ theme }) => theme.colors.text.dark};
-`;
 
 export default Highlight;

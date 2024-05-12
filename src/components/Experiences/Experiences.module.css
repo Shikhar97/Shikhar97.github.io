@@ -1,0 +1,210 @@
+.role {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: calc(14 / 16 * 1rem);
+  margin-bottom: 8px;
+}
+
+.items {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.item {
+  display: flex;
+  align-items: top;
+  position: relative;
+}
+
+.timeline {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-text-light);
+
+  left: 24px;
+}
+
+.dotPrimary {
+  height: 32px;
+  width: 32px;
+  border: 1px solid var(--color-text-light);
+  outline: 1px solid var(--color-text-light);
+  outline-offset: 8px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+
+  margin: 8px;
+  margin-top: 32px;
+  margin-right: 24px;
+}
+
+.dotSecondary {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+
+  margin: 8px;
+  margin-top: 32px;
+  margin-right: 24px;
+}
+
+.connector {
+  position: absolute;
+  height: 1px;
+  background-color: var(--color-primary);
+  width: 32px;
+  left: 32px;
+  top: 48px;
+}
+
+.bullet {
+  display: flex;
+  align-items: top;
+  position: relative;
+}
+
+.dotCore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 32px;
+}
+
+.time {
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  font-size: calc(12 / 16 * 1rem);
+}
+
+.description {
+  font-weight: 400;
+  max-width: 650px;
+}
+
+.company {
+  font-size: calc(21 / 16 * 1rem);
+}
+
+.experiences {
+  background-color: var(--color-background-dark);
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.image {
+  display: none;
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+}
+
+.mobileImage {
+  display: initial;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .items {
+    gap: 80px;
+  }
+
+  .role {
+    font-size: calc(16 / 16 * 1rem);
+  }
+
+  .timeline {
+    left: 264px;
+  }
+
+  .dotPrimary {
+    margin: 84px 48px;
+  }
+
+  .dotSecondary {
+    margin: auto 48px;
+  }
+
+  .connector {
+    top: 100px;
+    left: 200px;
+    width: 64px;
+  }
+
+  .infos {
+    gap: 40px;
+  }
+
+  .company {
+    font-size: calc(24 / 16 * 1rem);
+  }
+
+  .experiences {
+    padding: 64px 64px;
+  }
+
+  .mobileImage {
+    display: none;
+  }
+
+  .image {
+    display: initial;
+  }
+}
+
+@media (min-width: 1024px) {
+  .role {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .timeline {
+    left: 296px;
+  }
+
+  .dotPrimary {
+    margin: 84px 80px;
+  }
+
+  .dotSecondary {
+    margin: auto 80px;
+  }
+
+  .connector {
+    width: 96px;
+  }
+
+  .company {
+    font-size: calc(28 / 16 * 1rem);
+  }
+
+  .experiences {
+    gap: 32px;
+  }
+}

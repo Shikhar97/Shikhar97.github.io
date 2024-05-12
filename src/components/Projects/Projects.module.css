@@ -1,0 +1,25 @@
+.projects {
+  background-color: var(--color-background-dark);
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+@media (min-width: 1080px) {
+  .projects {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects {
+    padding: 64px 64px;
+  }
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

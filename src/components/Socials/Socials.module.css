@@ -1,0 +1,52 @@
+.socials {
+  position: fixed;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  z-index: 50;
+
+  bottom: 0;
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .socials {
+    display: flex;
+    left: 16px;
+  }
+
+  .socials {
+    left: 32px;
+  }
+}
+
+.iconLink {
+  text-decoration: none;
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
+.iconLink > * {
+  transition: var(--transition);
+}
+
+.iconLink:hover > * {
+  transform: scale(1.2) translateY(-4px);
+  color: var(--color-primary-hover);
+}
+
+.line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .line {
+    display: block;
+    border: 1px solid var(--color-text-light);
+    height: 100px;
+    width: 0px;
+  }
+}

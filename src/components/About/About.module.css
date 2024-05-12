@@ -1,0 +1,61 @@
+.about {
+  display: grid;
+  padding: 32px;
+  padding-bottom: 0px;
+  row-gap: 80px;
+  grid-template-areas:
+    "aboutme"
+    "picture";
+}
+
+.aboutme {
+  grid-area: aboutme;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.description {
+  font-weight: 400;
+}
+
+.picture {
+  grid-area: picture;
+  justify-self: center;
+  width: 300px;
+}
+
+.download {
+  align-self: start;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-areas: "picture aboutme";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0px;
+    padding: 64px;
+  }
+
+  .aboutme {
+    justify-self: start;
+    max-width: min(400px, 100%);
+  }
+
+  .picture {
+    width: min(50vw, 250px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    column-gap: 80px;
+    padding-bottom: 0px;
+  }
+
+  .picture {
+    justify-self: end;
+    width: min(50vw, 500px);
+  }
+}

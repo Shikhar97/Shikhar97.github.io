@@ -1,10 +1,5 @@
 export const SKILLS = [
     {
-        name: "AWS",
-        level: 5,
-        content: "I have used AWS to deploy and monitor my projects. I have experience with EC2, S3, ECS, ECR, Route53, CloudWatch, IAM, and more."
-    },
-    {
         name: "Python",
         level: 5,
         content: "I am proficient in Python and have used it extensively for backend development, data analysis, and machine learning projects. I am familiar with libraries like NumPy, Pandas, Matplotlib, and Scikit-learn."

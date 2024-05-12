@@ -1,0 +1,182 @@
+.image {
+  width: 100%;
+  max-width: 650px;
+  max-height: 500px;
+  object-fit: cover;
+  z-index: 1;
+  line-height: 0;
+}
+
+.smallImage {
+  display: none;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  right: 32px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+}
+
+.degree {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: calc(14 / 16 * 1rem);
+  margin-top: 16px;
+}
+
+.school {
+  margin-bottom: 16px;
+  font-size: calc(21 / 16 * 1rem);
+}
+
+.courses {
+  background-color: var(--color-background-light);
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+.course {
+  font-weight: 400;
+}
+
+.data {
+  margin-top: 16px;
+  display: flex;
+  gap: 64px;
+  font-size: calc(20 / 16 * 1rem);
+}
+
+.time {
+  font-weight: 400;
+}
+
+.gpa {
+  color: var(--color-primary);
+}
+
+.college {
+  display: flex;
+  isolation: isolate;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stretch {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .image {
+    display: none;
+  }
+
+  .smallImage {
+    display: block;
+  }
+
+  .degree {
+    margin-left: 32px;
+    font-size: calc(16 / 16 * 1rem);
+  }
+
+  .school {
+    margin-left: 32px;
+    font-size: calc(24 / 16 * 1rem);
+  }
+
+  .courses {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 8px;
+  }
+
+  .data {
+    margin-left: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .college.left {
+    flex-direction: row;
+  }
+
+  .college.right {
+    flex-direction: row-reverse;
+  }
+
+  .image {
+    width: auto;
+    height: 400px;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .smallImage {
+    display: none;
+  }
+
+  .info {
+    width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .info.left {
+    align-items: flex-end;
+    margin-left: -32px;
+    margin-right: 0px;
+  }
+
+  .info.right {
+    align-items: flex-start;
+    margin-left: 0px;
+    margin-right: -32px;
+  }
+
+  .degree {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .degree.left .school.left .data.left {
+    margin-left: 32px;
+    margin-right: 0px;
+  }
+
+  .degree.right .school.right .data.right {
+    margin-left: 0px;
+    margin-right: 32px;
+  }
+
+  .school {
+    font-size: calc(28 / 16 * 1rem);
+  }
+
+  .courses.left {
+    align-items: flex-end;
+  }
+
+  .courses.right {
+    align-items: flex-start;
+  }
+
+  .data.left {
+    align-self: flex-end;
+  }
+
+  .data.right {
+    align-items: flex-start;
+  }
+}

@@ -5,15 +5,15 @@ const MIN_DESKTOP = `(min-width: ${BREAKPOINTS.desktop}px)`;
 const MIN_LARGE_DESKTOP = `(min-width: ${BREAKPOINTS.largeDesktop}px)`;
 
 export const MIN_WIDTH = {
-    tablet: MIN_TABLET,
-    desktop: MIN_DESKTOP,
-    largeDesktop: MIN_LARGE_DESKTOP,
+  tablet: MIN_TABLET,
+  desktop: MIN_DESKTOP,
+  largeDesktop: MIN_LARGE_DESKTOP,
 };
 
 export const QUERIES = {
-    tabletAndUp: `@media ${MIN_TABLET}`,
-    desktopAndUp: `@media ${MIN_DESKTOP}`,
-    largeDesktopAndUp: `@media ${MIN_LARGE_DESKTOP}`,
+  tabletAndUp: `@media ${MIN_TABLET}`,
+  desktopAndUp: `@media ${MIN_DESKTOP}`,
+  largeDesktopAndUp: `@media ${MIN_LARGE_DESKTOP}`,
 };
 
 export default BREAKPOINTS;

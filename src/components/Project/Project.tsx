@@ -1,187 +1,74 @@
-import {QUERIES} from "breakpoints";
-import {FaGithubAlt} from "react-icons/fa";
-import {IoOpen} from "react-icons/io5";
-import Tilt from "react-parallax-tilt";
-import styled from "styled-components";
-import {
-    Wrapper as CollegeWrapper,
-    Courses,
-    Data,
-    Degree,
-    Image,
-    Info,
-    School,
-    Stretch,
-} from "../College/College";
-import SlideUp from "../SlideUp";
-import {HoverIconLink} from "../Socials/Socials";
-
+import { IconLink } from "@/components/Socials";
+import styles from "./Project.module.css";
+import clsx from "clsx";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { IoOpen } from "react-icons/io5";
 export interface IProject {
-    name: string;
-    techs: string[];
-    description: string;
-    github: string;
-    website: string;
-    imgSrc: string;
-    type: string;
+  name: string;
+  techs: string[];
+  description: string;
+  github: string;
+  website: string;
+  imgSrc: string;
+  type: string;
 }
 
 export interface IProps {
-    project: IProject;
-    side: "left" | "right";
+  project: IProject;
+  side: "left" | "right";
 }
 
-const Project: React.FC<IProps> = ({project, side, ...delegated}) => {
-    return (
-        <Wrapper side={side} {...delegated}>
-            <SlideUp>
-                <StretchedProject>
-                    <TiltingImage
-                        tiltMaxAngleX={3}
-                        tiltMaxAngleY={3}
-                        glareEnable={true}
-                        glarePosition="top"
-                        glareMaxOpacity={0.2}
-                        glareBorderRadius="8px"
-                    >
-                        <a href={project.website}>
-                            <Image src={project.imgSrc} alt={project.name}/>
-                        </a>
-                    </TiltingImage>
-                    <StaticImage src={project.imgSrc} alt={project.name}/>
-                </StretchedProject>
-            </SlideUp>
+const Project: React.FC<IProps> = ({ project, side, ...delegated }) => {
+  return (
+    <div className={clsx(styles.project, styles[side])} {...delegated}>
+      <div className={styles.stretch}>
+        <a href={project.website}>
+          <Image
+            className={styles.tiltingImage}
+            src={project.imgSrc}
+            alt={project.name}
+            width={400}
+            height={200}
+          />
+        </a>
+        <Image
+          width={100}
+          height={100}
+          className={styles.staticImage}
+          src={project.imgSrc}
+          alt={project.name}
+        />
+      </div>
 
-            <Info side={side}>
-                <SlideUp delay={200}>
-                    <Feature side={side}>{project.type}</Feature>
-                </SlideUp>
-                <SlideUp delay={200}>
-                    <Name side={side}>{project.name}</Name>
-                </SlideUp>
-                <SlideUp delay={200}>
-                    <Description side={side}>{project.description}</Description>
-                </SlideUp>
-                <Techs side={side}>
-                    {project.techs.map((tech, idx) => (
-                        <SlideUp delay={200 + idx * 100} key={tech}>
-                            <Tech key={tech}>{tech}</Tech>
-                        </SlideUp>
-                    ))}
-                </Techs>
-                <Links side={side}>
-                    <SlideUp delay={200 + project.techs.length * 100}>
-                        {project.github.length > 0 && (
-                            <HoverIconLink
-                                href={project.github}
-                                target="_blank"
-                            >
-                                <Github size={32}/>
-                            </HoverIconLink>
-                        )}
-                    </SlideUp>
-                    <SlideUp delay={300 + project.techs.length * 100}>
-                        {project.website.length > 0 && (
-                            <HoverIconLink href={project.website} target="_blank">
-                                <Website size={32}/>
-                            </HoverIconLink>
-                        )}
-                    </SlideUp>
-                </Links>
-            </Info>
-        </Wrapper>
-    );
+      <div className={clsx(styles.info, styles[side])}>
+        <h4 className={clsx(styles.feature, styles[side])}>{project.type}</h4>
+        <h4 className={clsx(styles.name, styles[side])}>{project.name}</h4>
+        <h4 className={clsx(styles.description, styles[side])}>
+          {project.description}
+        </h4>
+        <ul className={clsx(styles.techs, styles[side])}>
+          {project.techs.map((tech, idx) => (
+            <li className={styles.tech} key={tech}>
+              {tech}
+            </li>
+          ))}
+        </ul>
+        <ul className={clsx(styles.links, styles[side])}>
+          {project.github.length > 0 && (
+            <IconLink href={project.github} target="_blank">
+              <FaGithub size={32} />
+            </IconLink>
+          )}
+          {project.website.length > 0 && (
+          <IconLink href={project.website} target="_blank">
+            <IoOpen size={32} />
+          </IconLink>
+              )}
+        </ul>
+      </div>
+    </div>
+  );
 };
-
-const iconStyle = `
-    cursor: pointer;
-
-    ${QUERIES.tabletAndUp} {
-        font-size: 24px;
-    }
-`;
-
-export const Links = styled.div<StyledProps>`
-  flex-shrink: 0;
-  display: flex;
-  gap: 32px;
-  margin-top: 16px;
-  color: ${({theme}) => theme.colors.text.light};
-
-  ${QUERIES.tabletAndUp} {
-    margin-left: 32px;
-  }
-
-  ${QUERIES.desktopAndUp} {
-    margin-left: ${({side}) => (side === "left" ? "0" : "32px")};
-    margin-right: ${({side}) => (side === "right" ? "0" : "32px")};
-    align-self: ${({side}) =>
-            side === "left" ? "flex-end" : "flex-start"};
-  }
-
-  & > * {
-    transition: var(--transition);
-  }
-`;
-
-const StretchedProject = styled(Stretch)`
-  display: flex;
-  justify-content: center;
-  max-width: 525px;
-  object-fit: cover;
-`;
-
-export const Github = styled(FaGithubAlt)`
-  ${iconStyle}
-`;
-
-const StaticImage = styled(Image)`
-  display: none;
-
-  @media (prefers-reduced-motion: reduce) {
-    display: block;
-  }
-`;
-
-const TiltingImage = styled(Tilt)`
-  display: block;
-
-  @media (prefers-reduced-motion: reduce) {
-    display: none;
-  }
-`;
-
-export const Website = styled(IoOpen)`
-  ${iconStyle}
-  &:hover {
-    color: ${({theme}) => theme.colors.primary};
-  }
-`;
-
-interface StyledProps {
-    side: "left" | "right";
-}
-
-const Wrapper = styled(CollegeWrapper)``;
-
-export const Feature = styled(Degree)``;
-
-export const Tech = styled.p`
-  font-weight: 400;
-  color: ${({theme}) => theme.colors.primary};
-  text-transform: lowercase;
-  font-size: calc(14 / 16 * 1rem);
-`;
-
-export const Name = styled(School)``;
-
-export const Description = styled(Courses)`
-  font-weight: 400;
-`;
-export const Techs = styled(Data)`
-  gap: 24px;
-  display: flex;
-  /* flex-wrap: wrap; */
-`;
 
 export default Project;

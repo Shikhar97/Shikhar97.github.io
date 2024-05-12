@@ -1,0 +1,19 @@
+.education {
+  background-color: var(--color-background-dark);
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .education {
+    padding: 64px 64px;
+  }
+}
+
+.collegeList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

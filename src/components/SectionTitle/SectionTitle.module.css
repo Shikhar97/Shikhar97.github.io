@@ -1,0 +1,39 @@
+.sectionTitle {
+  font-size: calc(24 / 16 * 1rem);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    gap: 32px;
+  }
+}
+
+.line {
+  flex-grow: 1;
+  border-bottom: 1px solid;
+}
+
+.constrained {
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+}

@@ -1,130 +1,118 @@
-import Button from "@/components/Button/Button";
+"use client";
+import Button from "@/components/Button";
 import Highlight from "@/components/Highlight/Highlight";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
-import {MIN_WIDTH, QUERIES} from "breakpoints";
-import styled from "styled-components";
+import { MIN_WIDTH } from "breakpoints";
+import styles from "./About.module.css";
+import { useTheme } from "@/context/ThemeContext";
 import SlideUp from "../SlideUp";
 
-export interface IProps {
+
+interface Props {
     delegated?: any;
-    theme: "dark" | "light";
 }
 
-const About: React.FC<React.PropsWithChildren<IProps>> = ({
-                                                              children,
-                                                              theme,
-                                                              ...delegated
-                                                          }) => {
+const About = ({ ...delegated }: Props) => {
     const downloadResume = () => {
         window.open("/resume", "_blank");
     };
 
-    const aboutUrl =
-        theme === "light" ? "images/shikhar-3.jpeg" : "images/shikhar-3.jpeg";
+    const { aboutUrl, aboutUrlSmall } = useTheme();
+
     return (
-        <Wrapper {...delegated} id="about">
-            <AboutMe>
-                <SlideUp>
-                    <SectionTitle label={"About Me "} side={"left"}/>
-                </SlideUp>
-                <SlideUp>
-                    <Description>
-                        Hi there! My name is Shikhar Gupta, and I am currently pursuing a Master's in Computer Science
-                        at ASU, set to graduate in May 2024.
-                    </Description>
-                </SlideUp>
-                <SlideUp>
-                    <Description>
-                        I have worked as a Software Engineer at Aruba Networks for 3 years as a full-stack developer,
-                        and I am well-versed in Python, C++, Docker, Kubernetes, ML frameworks, and Linux along with an
-                        in-depth understanding of SQL/NoSQL databases software systems.
-                    </Description>
-                </SlideUp>
-                <SlideUp>
-                    <Description>
-                        Creativity and innovation drive my problem-solving
-                        approach, as I enjoy building products that positively impact society and automating repetitive
-                        tasks in my life.
-                    </Description>
-                </SlideUp>
-                <SlideUp>
-                    <Download onClick={downloadResume}>
-                        Download Resume
-                    </Download>
-                </SlideUp>
-            </AboutMe>
-            <Picture>
-                <Source media={MIN_WIDTH.desktop} srcSet={aboutUrl}/>
-                <Source
-                    media={MIN_WIDTH.tablet}
-                    srcSet="images/shikhar-3.jpeg"
-                />
-                <Image src={aboutUrl} alt="Shikhar Gupta"/>
-            </Picture>
-        </Wrapper>
+        <div className={styles.about} {...delegated} id="about">
+            <div className={styles.aboutme}>
+                <SectionTitle side={"left"}>About Me</SectionTitle>
+                <p className={styles.description}>
+                    Hi there! My name is Shikhar Gupta, and I have recently graduated from Arizona State University
+                    with a Masters in Computer Science. As I embark on the next chapter of my career, I am exploring
+                    new opportunities for full-time roles in Full-stack Development, Machine Learning, or
+                    Cloud Infrastructure.
+
+                </p>
+                <p className={styles.description}>
+                    What I Bring to the Table:<br/>
+                    - 3+ Years of Professional Experience<br/>
+                    - Proficiency in Python, GoLang, Java, C++, JavaScript, and various libraries and frameworks,
+                    including D3.js, NodeJS, ReactJS, Django, Flask, and FastAPI.<br/>
+                    - Expertise in Machine Learning with a strong foundation in TensorFlow, PyTorch, and Keras.<br/>
+                    - Certifications and Accreditations - AWS Certified Solutions Architect and Cloud Practitioner,
+                    Azure Databricks<br/>
+                </p>
+                <Button className={styles.download} onClick={downloadResume}>
+                    Download Resume
+                </Button>
+            </div>
+            <picture className={styles.picture}>
+                <source media={MIN_WIDTH.desktop} srcSet={aboutUrl} />
+                <source media={MIN_WIDTH.tablet} srcSet={aboutUrlSmall} />
+                <img src={aboutUrl} alt="Shikhar Gupta" />
+            </picture>
+        </div>
     );
 };
 
-const Wrapper = styled.div`
-  display: grid;
-  padding: 32px;
-  padding-bottom: 0px;
-  row-gap: 80px;
-  grid-template-areas:
-        "aboutme"
-        "picture";
-
-  ${QUERIES.tabletAndUp} {
-    grid-template-areas: "picture aboutme";
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0px;
-    padding: 64px;
-  }
-
-  ${QUERIES.desktopAndUp} {
-    column-gap: 80px;
-    padding-bottom: 0px;
-  }
-`;
-
-const AboutMe = styled.div`
-  grid-area: aboutme;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  ${QUERIES.tabletAndUp} {
-    justify-self: start;
-    max-width: min(400px, 100%);
-  }
-`;
-
-const Description = styled.p`
-  font-weight: 400;
-`;
-
-const Picture = styled.picture`
-  grid-area: picture;
-  justify-self: center;
-  width: 300px;
-
-  ${QUERIES.tabletAndUp} {
-    width: min(50vw, 250px);
-  }
-
-  ${QUERIES.desktopAndUp} {
-    justify-self: end;
-    width: min(50vw, 500px);
-  }
-`;
-
-const Source = styled.source``;
-
-const Image = styled.img``;
-
-const Download = styled(Button)`
-  align-self: start;
-  margin-top: 32px;
-`;
-
 export default About;
+
+
+//
+// export interface IProps {
+//     delegated?: any;
+//     theme: "dark" | "light";
+// }
+//
+// const About: React.FC<React.PropsWithChildren<IProps>> = ({
+//                                                               children,
+//                                                               theme,
+//                                                               ...delegated
+//                                                           }) => {
+//     const downloadResume = () => {
+//         window.open("/resume", "_blank");
+//     };
+//
+//     const aboutUrl =
+//         theme === "light" ? "images/shikhar-3.jpeg" : "images/shikhar-3.jpeg";
+//     return (
+//         <Wrapper {...delegated} id="about">
+//             <AboutMe>
+//                 <SlideUp>
+//                     <SectionTitle label={"About Me "} side={"left"}/>
+//                 </SlideUp>
+//                 <SlideUp>
+//                     <Description>
+//                         Hi there! My name is Shikhar Gupta, and I am currently pursuing a Master's in Computer Science
+//                         at ASU, set to graduate in May 2024.
+//                     </Description>
+//                 </SlideUp>
+//                 <SlideUp>
+//                     <Description>
+//                         I have worked as a Software Engineer at Aruba Networks for 3 years as a full-stack developer,
+//                         and I am well-versed in Python, C++, Docker, Kubernetes, ML frameworks, and Linux along with an
+//                         in-depth understanding of SQL/NoSQL databases software systems.
+//                     </Description>
+//                 </SlideUp>
+//                 <SlideUp>
+//                     <Description>
+//                         Creativity and innovation drive my problem-solving
+//                         approach, as I enjoy building products that positively impact society and automating repetitive
+//                         tasks in my life.
+//                     </Description>
+//                 </SlideUp>
+//                 <SlideUp>
+//                     <Download onClick={downloadResume}>
+//                         Download Resume
+//                     </Download>
+//                 </SlideUp>
+//             </AboutMe>
+//             <Picture>
+//                 <Source media={MIN_WIDTH.desktop} srcSet={aboutUrl}/>
+//                 <Source
+//                     media={MIN_WIDTH.tablet}
+//                     srcSet="images/shikhar-3.jpeg"
+//                 />
+//                 <Image src={aboutUrl} alt="Shikhar Gupta"/>
+//             </Picture>
+//         </Wrapper>
+//     );
+// };
+//

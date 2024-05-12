@@ -1,42 +1,43 @@
-import { QUERIES } from "breakpoints";
-import styled from "styled-components";
+import clsx from "clsx";
+import styles from "./SectionTitle.module.css";
+import { ComponentProps } from "react";
 
-export interface IProps {
-    label: string;
-    side: "left" | "right";
-    delegated?: any;
+interface Props extends ComponentProps<"div"> {
+  side: "left" | "right";
+  delegated?: any;
 }
 
-const SectionTitle = ({ label, side, ...delegated }: IProps) => {
-    return (
-        <Wrapper {...delegated} side={side}>
-            {label}
-            <Line />
-        </Wrapper>
-    );
+const SectionTitle = ({ side, children, className, ...delegated }: Props) => {
+  return (
+    <div
+      className={clsx(styles.sectionTitle, styles[side], className)}
+      {...delegated}
+    >
+      {children}
+      <hr className={styles.line} />
+    </div>
+  );
 };
 
-interface StyledProps {
-    side: "left" | "right";
-}
+export const ConstrainedTitle = ({ className, ...delegated }: Props) => {
+  return (
+    <SectionTitle
+      className={clsx(styles.constrained, className)}
+      {...delegated}
+    />
+  );
+};
 
-const Wrapper = styled.div<StyledProps>`
-    font-size: calc(24 / 16 * 1rem);
-    color: ${({ theme }) => theme.colors.primary};
-    display: flex;
-    align-items: center;
-    flex-direction: ${({ side }) => (side === "left" ? "row" : "row-reverse")};
-    gap: 16px;
+export const DesktopTitle = ({ className, ...delegated }: Props) => {
+  return (
+    <SectionTitle className={clsx(styles.desktop, className)} {...delegated} />
+  );
+};
 
-    ${QUERIES.tabletAndUp} {
-        gap: 32px;
-    }
-`;
-
-const Line = styled.div`
-    height: 1px;
-    flex-grow: 1;
-    background-color: ${({ theme }) => theme.colors.primary};
-`;
+export const MobileTitle = ({ className, ...delegated }: Props) => {
+  return (
+    <SectionTitle className={clsx(styles.mobile, className)} {...delegated} />
+  );
+};
 
 export default SectionTitle;

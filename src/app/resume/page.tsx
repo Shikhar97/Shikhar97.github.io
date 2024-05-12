@@ -1,11 +1,12 @@
+"use client"
 import PDFViewer from '@/components/PDFViewer';
 import PDFJSBackend from '@/backends/pdfjs';
 import {useEffect, useState} from "react";
-import {DARK_THEME, LIGHT_THEME} from "../../theme";
+import {DARK_THEME, LIGHT_THEME} from "../../../theme";
 
 
 export default function Resume() {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [theme, setTheme] = useState<"light" | "dark">("dark");
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
     };

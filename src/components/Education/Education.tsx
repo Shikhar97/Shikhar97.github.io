@@ -1,8 +1,7 @@
 import College from "@/components/College";
-import { QUERIES } from "breakpoints";
-import styled from "styled-components";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import SlideUp from "../SlideUp";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { ConstrainedTitle } from "@/components/SectionTitle";
+import styles from "./Education.module.css";
 
 const COLLEGES = [
     {
@@ -14,73 +13,42 @@ const COLLEGES = [
             "Data Processing at Scale",
             "Natural Language Processing",
             "Data Mining",
-            "HCI & User Experience",
+            "Image Analytics & Informatics",
         ],
         start: 2022,
         end: 2024,
         gpa: "4.0",
-        imgSrc: "images/asu.jpeg",
+        imgSrc: "/images/asu.jpeg",
     },
     {
         degree: "Bachelor of Engineering in Computer Science",
         school: "PES University",
         courses: [
             "Data Structures & Algorithms",
-            "Android Development",
+            "Big Data",
             "Operating Systems",
-            "Computer Networks",
-            "Machine Learning",
+            "Advanced Computer Networks",
+            "Advanced Machine Learning",
         ],
         start: 2015,
         end: 2019,
-        gpa: "3.7",
-        imgSrc: "images/pesu.jpeg",
+        gpa: "3.74",
+        imgSrc: "/images/pesu.jpeg",
     },
 ];
 
 const Education: React.FC = () => {
-    return (
-        <Wrapper>
-            <MaxWidthWrapper>
-                <SlideUp>
-                    <ContraintedTitle label="Education" side="left" />
-                </SlideUp>
-                <College {...COLLEGES[0]} side="left" />
-            </MaxWidthWrapper>
-            <College {...COLLEGES[1]} side="right" />
-        </Wrapper>
-    );
+  return (
+    <div className={styles.education}>
+      <MaxWidthWrapper>
+        <ConstrainedTitle side="left">Education</ConstrainedTitle>
+        <div className={styles.collegeList}>
+          <College {...COLLEGES[0]} side="left" />
+          <College {...COLLEGES[1]} side="right" />
+        </div>
+      </MaxWidthWrapper>
+    </div>
+  );
 };
-
-const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.colors.background.dark};
-    padding: 32px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    ${QUERIES.tabletAndUp} {
-        padding: 64px 64px;
-    }
-`;
-
-export const ContraintedTitle = styled(SectionTitle)`
-    width: 100%;
-    margin-bottom: 32px;
-    ${QUERIES.desktopAndUp} {
-        max-width: 650px;
-    }
-`;
-
-export const MaxWidthWrapper = styled.div`
-    ${QUERIES.desktopAndUp} {
-        max-width: max-content;
-        align-self: center;
-    }
-`;
-
-const Title = styled(SectionTitle)`
-    margin-bottom: 32px;
-`;
 
 export default Education;
