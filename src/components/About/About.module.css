@@ -17,6 +17,7 @@
 
 .description {
   font-weight: 400;
+  color: var(--color-text-regular);
 }
 
 .picture {

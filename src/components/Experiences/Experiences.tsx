@@ -34,10 +34,10 @@ const Experiences: React.FC = () => {
               <h4 className={styles.company}>ASU School of Community Resources and Development</h4>
               <h4 className={styles.role}>Front End Engineer</h4>
               <p className={styles.description}>
-                • Leading the development of a dashboard using React.js to provide a comprehensive
+                ⦿ &nbsp; &nbsp; Leading the development of a dashboard using React.js to provide a comprehensive
                 view of climate and community,
                 empowering users to build resilience and leverage actionable insights.<br></br>
-                • Designing an interface featuring a GIS-based mapping and analytics tool using
+                ⦿ &nbsp; &nbsp; Designing an interface featuring a GIS-based mapping and analytics tool using
                 Leaflet with visualizations using D3.js.
               </p>
             </div>
@@ -69,12 +69,12 @@ const Experiences: React.FC = () => {
                   <h4 className={styles.company}>Aruba Networks</h4>
                   <h4 className={styles.role}>Senior Software Engineer</h4>
                   <p className={styles.description}>
-                    • Led the development of a cross-platform testing solution using Python for a network security
+                    ⦿ &nbsp; &nbsp; Led the development of a cross-platform testing solution using Python for a network security
                     compliance tool, improving
                     end-to-end testing efficiency and reducing resource requirements by 80%.<br/><br/>
-                    • Engineered an innovative Golang-based solution for deploying virtual machines across ESXi,
+                    ⦿ &nbsp; &nbsp; Engineered an innovative Golang-based solution for deploying virtual machines across ESXi,
                     Hyper-V, KVM, AWS, and Azure, resulting in a 60% efficiency boost and streamlined process.<br/><br/>
-                    • Crafted a comprehensive solution using Python to detect vulnerabilities across product code
+                    ⦿ &nbsp; &nbsp; Crafted a comprehensive solution using Python to detect vulnerabilities across product code
                     databases, ensuring robustness in software development practices resulting in a 15% reduction in
                     potential security risks.<br/>
                   </p>
@@ -88,10 +88,10 @@ const Experiences: React.FC = () => {
                   <p className={styles.time}>July 2019 - April 2021</p>
                   <h4 className={styles.role}>Software Engineer</h4>
                   <p className={styles.description}>
-                    • Contributed to the development of a multi-threaded RESTApi Load Testing tool utilizing Jmeter,
+                    ⦿ &nbsp; &nbsp; Contributed to the development of a multi-threaded RESTApi Load Testing tool utilizing Jmeter,
                     leading to a 10%
                     improvement in product performance.<br/><br/>
-                    • Revamped monitoring and logging for a microservice-based architecture with Logstash, Kibana,
+                    ⦿ &nbsp; &nbsp; Revamped monitoring and logging for a microservice-based architecture with Logstash, Kibana,
                     Filebeat, Grafana, and InfluxDB, boosting performance visibility and cutting troubleshooting time by 50%.<br/>
                   </p>
                 </div>
@@ -106,7 +106,7 @@ const Experiences: React.FC = () => {
                   <h4 className={styles.role}>Software Engineer Intern</h4>
 
                   <p className={styles.description}>
-                    • Developed a Python-based automated UI testing solution using OpenCV, resulting in a 50% reduction in QA workload.
+                    ⦿ &nbsp; &nbsp; Developed a Python-based automated UI testing solution using OpenCV, resulting in a 50% reduction in QA workload.
                   </p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ const Experiences: React.FC = () => {
                 Machine Learning Intern
               </h4>
               <p className={styles.description}>
-                • Crafted a machine learning model for product classification and integrated it with
+                ⦿ &nbsp; &nbsp; Crafted a machine learning model for product classification and integrated it with
                 a search bar, resulting in a 10% improvement in search efficiency.
               </p>
             </div>
