@@ -12,17 +12,15 @@ import Socials from "@/components/Socials";
 import Splash from "@/components/Splash";
 import Technical from "@/components/Technical";
 import styles from "./Home.module.css";
-import {cookies} from "next/headers";
 
-const App = () => {
-    const savedTheme = cookies().get("color-theme")?.value ?? "dark";
+const App = ({ initialTheme }: { initialTheme: string }) => {
 
     return (
         <>
             <Socials/>
             <Email/>
             <div className={styles.grid}>
-                <Header initialTheme={savedTheme}/>
+                <Header initialTheme={initialTheme}/>
                 <Dots>
                     <Hero/>
                 </Dots>

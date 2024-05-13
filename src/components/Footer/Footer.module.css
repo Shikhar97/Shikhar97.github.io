@@ -8,7 +8,7 @@
 }
 
 .styledgithublink {
-    color: var(--color-text-regular);
+    color: white;
     text-decoration: none;
     padding: 5px;
     margin: auto;
@@ -26,7 +26,7 @@
 }
 
 .styledgithublink svg {
-    fill: var(--color-text-regular);
+    fill: white;
 }
 
 

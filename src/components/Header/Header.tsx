@@ -74,16 +74,6 @@ const Header = ({ initialTheme }: { initialTheme: string }) => {
 
         <div className={styles.menuButton}>
           <ThemeToggle initialTheme={initialTheme} />
-          {/* <DarkModeSwitch
-            style={{
-              marginLeft: "auto",
-              alignSelf: "center",
-              marginRight: "1em",
-            }}
-            checked={theme === "dark"}
-            onChange={toggleTheme}
-            size={32}
-          /> */}
           <Hamburger toggled={showSidebar} onToggle={toggleSidebar} />
         </div>
       </div>

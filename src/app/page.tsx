@@ -1,7 +1,7 @@
 import Home from "@/components/Home";
 
 const HomePage = () => {
-  return <Home />;
+  return <Home initialTheme={"dark"}/>;
 };
 
 export default HomePage;

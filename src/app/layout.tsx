@@ -3,11 +3,8 @@ import "../styles/reset.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Metadata } from "next";
-import { cookies } from "next/headers";
 import { DARK_COLORS, LIGHT_COLORS } from "theme";
 import Script from "next/script";
-
-export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: "Shikhar Gupta | Software Developer | Cloud Engineer | ML Engineer",
@@ -23,8 +20,8 @@ export const metadata: Metadata = {
 };
 
 function RootLayout({children}: { children: React.ReactNode }) {
-  const theme = cookies().get("color-theme")?.value ?? "light";
-  const themeColors = theme === "light" ? LIGHT_COLORS : DARK_COLORS;
+    const theme = "dark";
+    const themeColors = theme === "dark" ? DARK_COLORS: LIGHT_COLORS;
 
   return (
       <html

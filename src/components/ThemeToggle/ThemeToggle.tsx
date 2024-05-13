@@ -43,10 +43,14 @@ const ThemeToggle = ({ children, initialTheme, ...delegated }: Props) => {
 
   return (
     <DarkModeSwitch
-      style={{ marginLeft: "2em" }}
+      style={{
+        marginLeft: "auto",
+        alignSelf: "center",
+        marginRight: "1em"
+    }}
       checked={theme === "dark"}
       onChange={handleClick}
-      size={24}
+      size={30}
     />
   );
 };
