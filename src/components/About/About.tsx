@@ -5,7 +5,6 @@ import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import { MIN_WIDTH } from "breakpoints";
 import styles from "./About.module.css";
 import { useTheme } from "@/context/ThemeContext";
-import SlideUp from "../SlideUp";
 
 
 interface Props {

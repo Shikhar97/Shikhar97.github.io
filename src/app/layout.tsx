@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 import { DARK_COLORS, LIGHT_COLORS } from "theme";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Shikhar Gupta | Software Developer | Cloud Engineer | ML Engineer",
@@ -35,7 +36,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       <GoogleAnalytics gaId="G-JJBG91P2EL" />
       <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></Script>
         <title></title>
       </head>
       <body suppressHydrationWarning={true}>
