@@ -12,31 +12,31 @@ import Socials from "@/components/Socials";
 import Splash from "@/components/Splash";
 import Technical from "@/components/Technical";
 import styles from "./Home.module.css";
-import { cookies } from "next/headers";
+import {cookies} from "next/headers";
 
 const App = () => {
-  const savedTheme = cookies().get("color-theme")?.value ?? "dark";
+    const savedTheme = cookies().get("color-theme")?.value ?? "dark";
 
-  return (
-    <>
-      <Socials />
-      <Email />
-      <div className={styles.grid}>
-        <Header initialTheme={savedTheme} />
-        <Dots>
-          <Hero />
-        </Dots>
-        <About />
-        <Experiences />
-        <Projects />
-        <Technical />
-        <Education />
-        <Contact />
-        <Footer />
-      </div>
-      <Splash />
-    </>
-  );
+    return (
+        <>
+            <Socials/>
+            <Email/>
+            <div className={styles.grid}>
+                <Header initialTheme={savedTheme}/>
+                <Dots>
+                    <Hero/>
+                </Dots>
+                <About/>
+                <Experiences/>
+                <Projects/>
+                <Technical/>
+                <Education/>
+                <Contact/>
+                <Footer/>
+            </div>
+            <Splash/>
+        </>
+    );
 };
 
 export default App;
