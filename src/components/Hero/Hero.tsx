@@ -22,9 +22,8 @@ const Hero = () => {
             {/*    alt="Typing SVG"/></a>*/}
         </h3>
         <p className={styles.description}>
-            I bring over 3 years of experience specializing in full-stack development, CI/CD,
-            cloud infrastructure, and automation.
-            I have recently graduated from {" "}&nbsp;
+            I bring over 3 years of experience specializing in Full-stack development, Cloud Infrastructure, Machine learning
+            and automation. I have recently graduated from {" "}&nbsp;
             <Link
                 href="https://www.asu.edu/"
           target="_blank"
