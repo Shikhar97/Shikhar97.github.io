@@ -20,9 +20,8 @@ const ThemeToggle = ({ children, initialTheme, ...delegated }: Props) => {
     setThemeContext(nextTheme);
 
     // 2 — Update the cookie, for the user's next visit
-    Cookie.set("color-theme", nextTheme, {
-      expires: 1000,
-    });
+    localStorage.setItem("color-theme", nextTheme);
+    localStorage.setItem("show-splash", "true");
 
     // 3 — Update the DOM to present the new colors
     const root = document.documentElement;
