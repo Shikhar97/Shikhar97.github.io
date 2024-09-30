@@ -10,32 +10,33 @@
         "nc": "new-component"
     },
     "dependencies": {
-        "@next/third-parties": "^14.2.12",
+        "@next/third-parties": "^14.2.1",
         "@types/js-cookie": "^3.0.6",
-        "@types/node": "22.5.5",
-        "@types/react": "18.3.7",
-        "@types/react-dom": "18.3.0",
-        "clsx": "^2.1.1",
-        "eslint-config-next": "^14.2.12",
-        "flowbite": "^2.5.1",
-        "flowbite-react": "^0.10.1",
-        "hamburger-react": "^2.5.1",
-        "jquery": "^3.7.1",
+        "@types/node": "18.14.0",
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.11",
+        "clsx": "^2.1.0",
+        "eslint": "8.34.0",
+        "eslint-config-next": "^14.2.1",
+        "flowbite": "^2.3.0",
+        "flowbite-react": "^0.9.0",
+        "hamburger-react": "^2.5.0",
+        "jquery": "^3.7.0",
         "js-cookie": "^3.0.5",
-        "next": "^14.2.12",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-icons": "^5.3.0",
-        "react-parallax-tilt": "^1.7.239",
+        "next": "^14.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "react-parallax-tilt": "^1.7.161",
         "react-toggle-dark-mode": "^1.1.1",
-        "styled-components": "^6.1.13",
-        "typescript": "5.6.2"
+        "styled-components": "^6.1.11",
+        "typescript": "4.9.5"
     },
     "devDependencies": {
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-        "autoprefixer": "^10.4.20",
+        "autoprefixer": "^10.4.19",
         "new-component": "^5.0.2",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.12"
+        "postcss": "^8.4.38",
+        "tailwindcss": "^3.4.3"
     }
 }
