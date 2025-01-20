@@ -10,6 +10,40 @@ const Experiences: React.FC = () => {
         <ConstrainedTitle side="left">Experiences</ConstrainedTitle>
         <div className={styles.items}>
           <div className={styles.timeline}/>
+
+          <div className={styles.item}>
+            <Image
+                className={styles.image}
+                height={100}
+                width={100}
+                src="/images/blusvn-logo.png"
+                alt="BLUSVN"
+            />
+            <div className={styles.dotPrimary}>
+              <div className={styles.dotCore}/>
+            </div>
+            <div className={styles.connector}/>
+            <div className={styles.info}>
+              <Image
+                  height={100}
+                  width={100}
+                  className={styles.mobileImage}
+                  src="/images/blusvn-logo.png"
+                  alt="BLUSVN"
+              ></Image>
+              <p className={styles.time}>June 2024 - Present</p>
+              <h4 className={styles.company}>BLUSVN</h4>
+              <h4 className={styles.role}>Founding Software Engineer</h4>
+              <p className={styles.description}>
+                ⦿ &nbsp; &nbsp; Leading the development of a cross-platform mobile app to improve access to bottled water across the United States.<br></br>
+                ⦿ &nbsp; &nbsp; Designed and implemented a secure, scalable microservice-based architecture utilizing AWS services to support over
+                100,000 daily active users.<br></br>
+                ⦿ &nbsp; &nbsp; Developed an in-house algorithm utilizing Kafka and Redis to find and assign nearest drivers prioritizing fast delivery.<br></br>
+
+              </p>
+            </div>
+          </div>
+
           <div className={styles.item}>
             <Image
                 className={styles.image}
